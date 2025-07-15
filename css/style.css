@@ -477,3 +477,249 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--soft-green);
 }
+
+/* Multi-page specific styles */
+.page-header {
+    background: linear-gradient(135deg, var(--warm-tan) 0%, var(--soft-green) 100%);
+    margin-top: 80px;
+    color: white;
+}
+
+.page-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-subtitle {
+    color: var(--warm-white);
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Feature cards for home page */
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--soft-green);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* SILK Network Footer styles */
+.silk-footer {
+    background-color: var(--deep-earth) !important;
+}
+
+.silk-link-card {
+    transition: transform 0.3s ease;
+}
+
+.silk-link-card:hover {
+    transform: translateY(-2px);
+}
+
+.silk-link-card a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.silk-link-card a:hover {
+    color: var(--warm-tan) !important;
+}
+
+/* Contact form styles */
+.silk-contact-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    border-bottom: 2px solid var(--warm-tan);
+    padding-bottom: 2rem;
+}
+
+/* Property and location page styles */
+.property-card,
+.affiliation-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover,
+.affiliation-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-image,
+.affiliation-logo {
+    height: 200px;
+    background: var(--warm-tan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.property-content,
+.affiliation-card {
+    padding: 2rem;
+}
+
+.property-features {
+    list-style: none;
+    padding: 0;
+}
+
+.property-features li {
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.property-features li:before {
+    content: "✓";
+    color: var(--soft-green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Community and experience items */
+.community-feature,
+.experience-item,
+.amenity-item,
+.benefit-item,
+.contribution-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--soft-green);
+}
+
+.value-stat h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Principle detail styles */
+.principle-detail {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--warm-tan);
+}
+
+.principle-detail h6 {
+    color: var(--primary-brown);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.principle-detail ul {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Contact method styles */
+.contact-method {
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Local community and event cards */
+.local-community-card,
+.event-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.local-community-card h5,
+.event-card h6 {
+    color: var(--primary-brown);
+    margin-bottom: 1rem;
+}
+
+/* Booking cards */
+.booking-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Innkeeper profile */
+.innkeeper-profile {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.innkeeper-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Active navigation states */
+.navbar-nav .nav-link.active {
+    color: var(--soft-green) !important;
+    font-weight: 600;
+}
+
+.dropdown-item.active {
+    background-color: var(--soft-green);
+    color: white;
+}
+
+/* Additional responsive improvements */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.25rem;
+    }
+    
+    .silk-contact-form {
+        padding: 2rem 1.5rem;
+    }
+    
+    .property-content,
+    .affiliation-card {
+        padding: 1.5rem;
+    }
+}
