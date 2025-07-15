@@ -518,26 +518,328 @@ html {
     margin-bottom: 1rem;
 }
 
-/* SILK Network Footer styles */
+/* Professional Footer Styles */
 .silk-footer {
-    background-color: var(--deep-earth) !important;
+    background: linear-gradient(135deg, var(--deep-earth) 0%, #4a3c28 100%);
+    color: var(--warm-white);
+    position: relative;
+    overflow: hidden;
 }
 
-.silk-link-card {
-    transition: transform 0.3s ease;
+.silk-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--warm-tan), transparent);
 }
 
-.silk-link-card:hover {
+.footer-main {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.footer-cta {
+    background: rgba(107, 142, 35, 0.1);
+    border: 1px solid rgba(107, 142, 35, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.footer-cta h3 {
+    color: var(--warm-tan);
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.footer-cta p {
+    color: var(--warm-white);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-cta .btn-group {
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-cta .btn {
+    min-width: 150px;
+}
+
+.footer-section h5 {
+    color: var(--warm-tan);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--soft-green);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: rgba(253, 245, 230, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--warm-tan);
+    padding-left: 0.5rem;
+    text-decoration: none;
+}
+
+.footer-links a::before {
+    content: '→';
+    margin-right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+}
+
+.contact-info {
+    background: rgba(139, 69, 19, 0.3);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--warm-white);
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    background: var(--soft-green);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contact-details h6 {
+    color: var(--warm-tan);
+    margin: 0 0 0.25rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(253, 245, 230, 0.9);
+}
+
+.silk-network-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.silk-network-item {
+    background: rgba(107, 142, 35, 0.1);
+    border: 1px solid rgba(107, 142, 35, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.silk-network-item:hover {
     transform: translateY(-2px);
+    border-color: var(--warm-tan);
+    background: rgba(107, 142, 35, 0.15);
 }
 
-.silk-link-card a {
+.silk-network-item.current {
+    background: rgba(139, 69, 19, 0.3);
+    border-color: var(--warm-tan);
+}
+
+.silk-network-item.current::before {
+    content: '★';
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: var(--warm-tan);
+    font-size: 1.2rem;
+}
+
+.silk-network-item a {
+    color: var(--warm-white);
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.silk-network-item:hover a {
+    color: var(--warm-tan);
+}
+
+.silk-network-item.coming-soon a {
+    color: rgba(253, 245, 230, 0.5);
+    cursor: default;
+}
+
+.silk-network-item h6 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.silk-network-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    padding: 1.5rem 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(210, 180, 140, 0.1);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    color: var(--warm-tan);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.footer-logo:hover {
+    color: var(--warm-white);
+    text-decoration: none;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(107, 142, 35, 0.2);
+    border: 1px solid rgba(107, 142, 35, 0.3);
+    border-radius: 50%;
+    color: var(--warm-white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-link:hover {
+    background: var(--soft-green);
+    border-color: var(--soft-green);
+    color: white;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.footer-legal a {
+    color: rgba(253, 245, 230, 0.7);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.silk-link-card a:hover {
-    color: var(--warm-tan) !important;
+.footer-legal a:hover {
+    color: var(--warm-tan);
+    text-decoration: none;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-main {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-cta {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-cta h3 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-cta .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .silk-network-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.75rem;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
 }
 
 /* Contact form styles */
