@@ -75,7 +75,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-    height: 100vh;
+    height: 80vh;
+    min-height: 500px;
     background: linear-gradient(rgba(139, 69, 19, 0.3), rgba(107, 142, 35, 0.3)),
                 url('../images/hero-bg.svg');
     background-size: cover;
@@ -83,14 +84,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
+    padding: 2rem 0;
 }
 
 .hero-title {
@@ -721,7 +722,7 @@ html {
 .silk-network-item h6 {
     margin: 0 0 0.5rem 0;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .silk-network-item p {

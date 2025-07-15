@@ -24,16 +24,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="story.html">Story</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="principles.html">Principles</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="crew.html">Crew</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="crewDropdown" role="button" data-bs-toggle="dropdown">
+                            Crew
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="crew/landscaping.html">Landscaping</a></li>
+                            <li><a class="dropdown-item" href="crew/gardening.html">Gardening</a></li>
+                            <li><a class="dropdown-item" href="crew/housekeeping.html">Housekeeping</a></li>
+                            <li><a class="dropdown-item" href="crew/cooking.html">Cooking</a></li>
+                            <li><a class="dropdown-item" href="crew/handyman.html">Handyman</a></li>
+                            <li><a class="dropdown-item" href="crew/live-in.html">Live-In</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="crew.html">All Opportunities</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="locationsDropdown" role="button" data-bs-toggle="dropdown">
@@ -106,20 +115,54 @@
 
                         <!-- Interest/Topic -->
                         <div class="mb-3">
-                            <label for="topic" class="form-label">What are you interested in? <span class="text-danger">*</span></label>
-                            <select class="form-select" id="topic" name="topic" required>
-                                <option value="">Select your primary interest...</option>
-                                <option value="guest">Guest Accommodation</option>
-                                <option value="crew-innkeeper">Join Crew - Live-In Innkeeper</option>
-                                <option value="crew-gardener">Join Crew - Landscaper/Gardener</option>
-                                <option value="crew-housekeeper">Join Crew - Housekeeping</option>
-                                <option value="crew-general">Join Crew - General Interest</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                                <option value="investment">Investment Interest</option>
-                                <option value="community">Community Connection</option>
-                                <option value="media">Media/Press Inquiry</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <label class="form-label">What are you interested in? <span class="text-danger">*</span></label>
+                            <p class="text-muted small">Check all that apply:</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="guest" name="interests[]" value="guest">
+                                        <label class="form-check-label" for="guest">Guest Accommodation</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="crew-innkeeper" name="interests[]" value="crew-innkeeper">
+                                        <label class="form-check-label" for="crew-innkeeper">Join Crew - Live-In Innkeeper</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="crew-gardener" name="interests[]" value="crew-gardener">
+                                        <label class="form-check-label" for="crew-gardener">Join Crew - Landscaper/Gardener</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="crew-housekeeper" name="interests[]" value="crew-housekeeper">
+                                        <label class="form-check-label" for="crew-housekeeper">Join Crew - Housekeeping</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="crew-general" name="interests[]" value="crew-general">
+                                        <label class="form-check-label" for="crew-general">Join Crew - General Interest</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="partnership" name="interests[]" value="partnership">
+                                        <label class="form-check-label" for="partnership">Partnership Opportunity</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="investment" name="interests[]" value="investment">
+                                        <label class="form-check-label" for="investment">Investment Interest</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="community" name="interests[]" value="community">
+                                        <label class="form-check-label" for="community">Community Connection</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="media" name="interests[]" value="media">
+                                        <label class="form-check-label" for="media">Media/Press Inquiry</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="other" name="interests[]" value="other">
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Professional Information -->
@@ -134,30 +177,29 @@
                             </div>
                         </div>
 
-                        <!-- Location Preference -->
-                        <div class="mb-3">
-                            <label for="location" class="form-label">Preferred Location (if applicable)</label>
-                            <select class="form-select" id="location" name="location">
-                                <option value="">No preference</option>
-                                <option value="ravenswood">Ravenswood, WV</option>
-                                <option value="parkersburg">Parkersburg, WV</option>
-                                <option value="marietta">Marietta, OH</option>
-                                <option value="any">Any location</option>
-                            </select>
-                        </div>
-
-                        <!-- Timeline -->
-                        <div class="mb-3">
-                            <label for="timeline" class="form-label">When are you looking to connect?</label>
-                            <select class="form-select" id="timeline" name="timeline">
-                                <option value="">Select timeline...</option>
-                                <option value="immediate">Immediately</option>
-                                <option value="1-month">Within 1 month</option>
-                                <option value="3-months">Within 3 months</option>
-                                <option value="6-months">Within 6 months</option>
-                                <option value="planning">Just planning ahead</option>
-                                <option value="flexible">Flexible</option>
-                            </select>
+                        <!-- Location and Timeline -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="location" class="form-label">Preferred Location (if applicable)</label>
+                                <select class="form-select" id="location" name="location">
+                                    <option value="">No preference</option>
+                                    <option value="ravenswood">Ravenswood, WV</option>
+                                    <option value="parkersburg">Parkersburg, WV</option>
+                                    <option value="marietta">Marietta, OH</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="timeline" class="form-label">When are you looking to connect?</label>
+                                <select class="form-select" id="timeline" name="timeline">
+                                    <option value="">Select timeline...</option>
+                                    <option value="immediate">Immediately</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="3-months">Within 3 months</option>
+                                    <option value="6-months">Within 6 months</option>
+                                    <option value="planning">Just planning ahead</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
                         </div>
 
                         <!-- Experience/Skills (for crew applicants) -->
@@ -219,16 +261,16 @@
                             <div class="contact-method">
                                 <div class="contact-icon">💼</div>
                                 <h5>Crew Opportunities</h5>
-                                <p>crew@silkhomes.org</p>
+                                <p>info@silkhomes.org</p>
                                 <small class="text-muted">Job applications and crew inquiries</small>
                             </div>
                         </div>
                         <div class="col-md-4 text-center">
                             <div class="contact-method">
                                 <div class="contact-icon">🏠</div>
-                                <h5>Guest Services</h5>
-                                <p>stay@silkhomes.org</p>
-                                <small class="text-muted">Booking and accommodation inquiries</small>
+                                <h5>Accommodation Only</h5>
+                                <p><a href="https://mtcottages.com" target="_blank" style="color: inherit;">Mt Cottages</a></p>
+                                <small class="text-muted">For lodging without intentional living</small>
                             </div>
                         </div>
                     </div>
@@ -293,10 +335,11 @@
                 <!-- Call to Action Section -->
                 <div class="footer-cta">
                     <h3>Ready to Join Our Community?</h3>
-                    <p>Whether you're seeking meaningful work, peaceful accommodation, or want to be part of something bigger, we'd love to connect with you.</p>
+                    <p>Whether you're seeking meaningful work, participating in intentional living, or want to be part of something bigger, we'd love to connect with you.</p>
                     <div class="btn-group d-flex">
                         <a href="crew.html" class="btn btn-primary">Join Our Crew</a>
-                        <a href="contact.html" class="btn btn-outline-light">Book a Stay</a>
+                        <a href="contact.html" class="btn btn-outline-light">Live With Us</a>
+                        <a href="https://mtcottages.com" target="_blank" class="btn btn-outline-light">Just Need a Stay?</a>
                         <a href="story.html" class="btn btn-outline-light">Learn More</a>
                     </div>
                 </div>
@@ -345,14 +388,14 @@
                                     <div class="contact-icon">💼</div>
                                     <div class="contact-details">
                                         <h6>Join Our Crew</h6>
-                                        <p>crew@silkhomes.org</p>
+                                        <p>info@silkhomes.org</p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <div class="contact-icon">🏠</div>
                                     <div class="contact-details">
-                                        <h6>Guest Services</h6>
-                                        <p>stay@silkhomes.org</p>
+                                        <h6>Accommodation Only</h6>
+                                        <p><a href="https://mtcottages.com" target="_blank" style="color: inherit;">Mt Cottages</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -362,58 +405,15 @@
                     <!-- SILK Network -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-section">
-                            <h5>The SILK Network</h5>
-                            <p style="color: rgba(253, 245, 230, 0.8); font-size: 0.9rem; margin-bottom: 1rem;">A community of connected ventures</p>
-                            <div class="silk-network-grid">
-                                <div class="silk-network-item">
-                                    <a href="https://silkcorp.org" target="_blank">
-                                        <h6>SILK Corp</h6>
-                                        <p>Foundation</p>
-                                    </a>
-                                </div>
-                                <div class="silk-network-item">
-                                    <a href="https://silkyoga.org" target="_blank">
-                                        <h6>SILK Yoga</h6>
-                                        <p>Wellness</p>
-                                    </a>
-                                </div>
-                                <div class="silk-network-item">
-                                    <a href="https://silkarts.org" target="_blank">
-                                        <h6>SILK Arts</h6>
-                                        <p>Culture</p>
-                                    </a>
-                                </div>
-                                <div class="silk-network-item">
-                                    <a href="https://silkcafe.org" target="_blank">
-                                        <h6>SILK Cafe</h6>
-                                        <p>Community</p>
-                                    </a>
-                                </div>
-                                <div class="silk-network-item current">
-                                    <a href="https://silkhomes.org">
-                                        <h6>SILK Homes</h6>
-                                        <p>Hospitality</p>
-                                    </a>
-                                </div>
-                                <div class="silk-network-item coming-soon">
-                                    <a>
-                                        <h6>SILK Tech</h6>
-                                        <p>Coming Soon</p>
-                                    </a>
-                                </div>
-                                <div class="silk-network-item">
-                                    <a href="https://silkwomen.org" target="_blank">
-                                        <h6>SILK Women</h6>
-                                        <p>Empowerment</p>
-                                    </a>
-                                </div>
-                                <div class="silk-network-item coming-soon">
-                                    <a>
-                                        <h6>SILK Y.A.C.H.T.</h6>
-                                        <p>Maritime</p>
-                                    </a>
-                                </div>
-                            </div>
+                            <h5>SILK YACHT</h5>
+                            <p style="color: rgba(253, 245, 230, 0.8); font-size: 0.85rem; margin-bottom: 1rem;">Integrated wellness ecosystem</p>
+                            <ul class="footer-links">
+                                <li><a href="https://silkyoga.org" target="_blank">🧘 Yoga & Wellness</a></li>
+                                <li><a href="https://silkarts.org" target="_blank">🎨 Arts & Culture</a></li>
+                                <li><a href="https://silkcafe.org" target="_blank">☕ Cafe & Community</a></li>
+                                <li><a href="https://silkhomes.org">🏡 Homes & Hospitality</a></li>
+                                <li><span style="color: rgba(253, 245, 230, 0.5);">⚡ Tech (Coming Soon)</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -437,9 +437,9 @@
                         </div>
                         
                         <div class="footer-legal">
-                            <span style="color: rgba(253, 245, 230, 0.6);">&copy; 2025 SILK Network</span>
-                            <a href="#privacy">Privacy Policy</a>
-                            <a href="#terms">Terms of Service</a>
+                            <span style="color: rgba(253, 245, 230, 0.6);">&copy; 2025 <a href="https://silkcorp.org" target="_blank" style="color: rgba(253, 245, 230, 0.6); text-decoration: none;">SILK Corp</a></span>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="terms-of-service.html">Terms of Service</a>
                         </div>
                     </div>
                 </div>
