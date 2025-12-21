@@ -1016,13 +1016,843 @@ html {
     .page-title {
         font-size: 2.25rem;
     }
-    
+
     .silk-contact-form {
         padding: 2rem 1.5rem;
     }
-    
+
     .property-content,
     .affiliation-card {
         padding: 1.5rem;
+    }
+}
+
+/*
+=================================
+PHASE 2 ENHANCEMENTS - NEW SECTIONS
+=================================
+*/
+
+/* Pathway Comparison Cards - How to Join */
+.pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.pathway-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--warm-tan);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.pathway-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pathway-card.highlighted {
+    border-top-color: var(--soft-green);
+    background: linear-gradient(to bottom, rgba(107, 142, 35, 0.05), white);
+}
+
+.pathway-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--soft-green);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pathway-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.pathway-card h4 {
+    color: var(--primary-brown);
+    margin-bottom: 0.5rem;
+}
+
+.pathway-subtitle {
+    color: var(--soft-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.pathway-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.pathway-requirements {
+    background: var(--warm-white);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pathway-requirements h6 {
+    color: var(--deep-earth);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.pathway-requirements ul {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.pathway-cta {
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Day in the Life Timeline */
+.day-timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.day-timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--soft-green), var(--warm-tan), var(--primary-brown));
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: white;
+    border: 3px solid var(--soft-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.timeline-time {
+    color: var(--soft-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-left: 3px solid var(--warm-tan);
+}
+
+.timeline-content h5 {
+    color: var(--primary-brown);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: var(--text-light);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.timeline-note {
+    font-style: italic;
+    color: var(--soft-green);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Property Gallery Cards */
+.property-gallery-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.property-gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.property-gallery-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--warm-tan) 0%, var(--soft-green) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.property-gallery-image .placeholder-icon {
+    font-size: 4rem;
+    opacity: 0.5;
+}
+
+.property-era-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.property-gallery-content {
+    padding: 1.5rem;
+}
+
+.property-gallery-content h4 {
+    color: var(--primary-brown);
+    margin-bottom: 0.25rem;
+}
+
+.property-location-tag {
+    color: var(--soft-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.property-amenities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.amenity-badge {
+    background: var(--warm-white);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.amenity-badge.private {
+    background: rgba(107, 142, 35, 0.15);
+    color: var(--soft-green);
+    font-weight: 600;
+}
+
+.amenity-badge.shared {
+    background: rgba(210, 180, 140, 0.3);
+    color: var(--deep-earth);
+}
+
+/* Living Simply Expectation Cards */
+.expectation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.expectation-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.expectation-card:hover {
+    transform: translateY(-3px);
+}
+
+.expectation-card h5 {
+    color: var(--primary-brown);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.expectation-icon {
+    font-size: 1.5rem;
+}
+
+.expectation-do,
+.expectation-dont {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.expectation-do {
+    background: rgba(107, 142, 35, 0.1);
+    border-left: 3px solid var(--soft-green);
+}
+
+.expectation-dont {
+    background: rgba(139, 21, 56, 0.1);
+    border-left: 3px solid var(--barn-red);
+}
+
+.expectation-do h6,
+.expectation-dont h6 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.expectation-do h6 {
+    color: var(--soft-green);
+}
+
+.expectation-dont h6 {
+    color: var(--barn-red);
+}
+
+/* What We Are / What We're Not Comparison */
+.comparison-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.what-we-are,
+.what-we-arent {
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.what-we-are {
+    background: linear-gradient(135deg, rgba(107, 142, 35, 0.1), rgba(107, 142, 35, 0.05));
+    border: 2px solid var(--soft-green);
+}
+
+.what-we-arent {
+    background: linear-gradient(135deg, rgba(210, 180, 140, 0.2), rgba(210, 180, 140, 0.1));
+    border: 2px solid var(--warm-tan);
+}
+
+.what-we-are h4,
+.what-we-arent h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.what-we-are h4 {
+    color: var(--soft-green);
+}
+
+.what-we-arent h4 {
+    color: var(--deep-earth);
+}
+
+.what-we-are ul,
+.what-we-arent ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.what-we-are li,
+.what-we-arent li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.what-we-are li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--soft-green);
+    font-weight: bold;
+}
+
+.what-we-arent li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: var(--barn-red);
+    font-weight: bold;
+}
+
+/* Around Town Map Styles */
+.map-embed-container {
+    height: 400px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: var(--warm-tan);
+    position: relative;
+}
+
+.map-fallback {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 2rem;
+}
+
+.map-fallback-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.poi-legend {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.poi-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+}
+
+.poi-icon {
+    font-size: 1.25rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.poi-label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.poi-distance {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-left: auto;
+}
+
+/* Regional Showcase Styles */
+.region-hero {
+    background: linear-gradient(135deg, var(--soft-green) 0%, var(--primary-brown) 100%);
+    border-radius: 1rem;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.region-hero h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.region-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.region-stat {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.region-stat h3 {
+    color: var(--warm-tan);
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.region-stat p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.season-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.season-card:hover {
+    transform: translateY(-3px);
+}
+
+.season-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.season-card h5 {
+    color: var(--primary-brown);
+    margin-bottom: 0.5rem;
+}
+
+.season-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Cost of Living Comparison */
+.cost-comparison {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--warm-tan);
+}
+
+.cost-row:last-child {
+    border-bottom: none;
+}
+
+.cost-label {
+    font-weight: 600;
+    color: var(--deep-earth);
+}
+
+.cost-value {
+    color: var(--soft-green);
+    font-weight: 600;
+}
+
+.cost-value.savings {
+    color: var(--soft-green);
+}
+
+/* Callout Boxes */
+.callout-box {
+    background: linear-gradient(135deg, rgba(107, 142, 35, 0.1), rgba(107, 142, 35, 0.05));
+    border: 1px solid var(--soft-green);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.callout-box.warning {
+    background: linear-gradient(135deg, rgba(210, 180, 140, 0.2), rgba(210, 180, 140, 0.1));
+    border-color: var(--warm-tan);
+}
+
+.callout-box h5 {
+    color: var(--primary-brown);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.callout-box p {
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* Smart Home Features */
+.smart-home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.smart-feature {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.smart-feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.smart-feature h6 {
+    color: var(--deep-earth);
+    margin-bottom: 0.25rem;
+}
+
+.smart-feature p {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .pathway-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .day-timeline {
+        padding-left: 2.5rem;
+    }
+
+    .timeline-marker {
+        width: 2rem;
+        height: 2rem;
+        left: -2rem;
+        font-size: 0.8rem;
+    }
+
+    .comparison-section {
+        grid-template-columns: 1fr;
+    }
+
+    .region-hero {
+        padding: 2rem 1.5rem;
+    }
+
+    .region-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .property-amenities {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .pathway-card {
+        padding: 1.5rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .expectation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .season-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*
+=================================
+Around Town Section
+Map embed and POI styles
+=================================
+*/
+
+.map-embed-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: 2px solid var(--warm-tan);
+    background: white;
+}
+
+.map-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(107, 142, 35, 0.05));
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+.map-fallback-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.map-fallback p {
+    margin: 0.5rem 0;
+}
+
+.map-fallback strong {
+    color: var(--primary-brown);
+    font-size: 1.2rem;
+}
+
+.poi-legend {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 2px solid var(--warm-tan);
+    height: fit-content;
+}
+
+.poi-legend h5 {
+    color: var(--primary-brown);
+    font-weight: 600;
+    border-bottom: 2px solid var(--warm-tan);
+    padding-bottom: 0.75rem;
+}
+
+.poi-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(210, 180, 140, 0.3);
+}
+
+.poi-item:last-child {
+    border-bottom: none;
+}
+
+.poi-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(107, 142, 35, 0.1);
+    border-radius: 50%;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.poi-details h6 {
+    color: var(--deep-earth);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+}
+
+.poi-details p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.things-to-do {
+    background: rgba(107, 142, 35, 0.05);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(107, 142, 35, 0.2);
+}
+
+.things-to-do h5 {
+    color: var(--primary-brown);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.activity-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.75rem;
+    position: relative;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.activity-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--soft-green);
+    font-weight: bold;
+}
+
+/* Responsive adjustments for Around Town */
+@media (max-width: 992px) {
+    .map-embed-container {
+        height: 350px;
+        margin-bottom: 1.5rem;
+    }
+
+    .poi-legend,
+    .things-to-do {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-embed-container {
+        height: 300px;
+    }
+
+    .poi-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.25rem;
+    }
+
+    .map-fallback-icon {
+        font-size: 3rem;
     }
 }
