@@ -1,6 +1,6 @@
 include:
-  - project: 'FocusApiary/ci-templates'
-    ref: main
+  - project: 'DroidOpsInc/launch-sequence'
+    ref: v0.2.5
     file: '/pipelines/static-site.yml'
 variables:
   GITHUB_REPO: "WorldEnterpriseGroup/silkhomes"
