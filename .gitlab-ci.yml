@@ -1,0 +1,7 @@
+include:
+  - project: 'FocusApiary/ci-templates'
+    ref: main
+    file: '/pipelines/static-site.yml'
+variables:
+  GITHUB_REPO: "WorldEnterpriseGroup/silkhomes"
+  SITE_DIR: "."
