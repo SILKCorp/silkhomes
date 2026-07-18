@@ -1,0 +1,144 @@
+/* SILK Homes adaptation layer for the supplied nature-retreat template. */
+
+:root {
+    --primary: #fbfaf4;
+    --text-color: #18382a;
+    --text-color-2: #5d665e;
+    --background-color: #f1e9dc;
+    --accent-color: #2f5b42;
+    --accent-color-2: #c69b4a;
+    --accent-color-3: #e6eee5;
+    --accent-color-4: #594a3a;
+    --accent-color-5: #c9c0b1;
+    --accent-color-6: #f7f2ea;
+}
+
+body {
+    background: var(--primary);
+}
+
+.silk-site-header {
+    box-shadow: 0 8px 30px rgba(24, 56, 42, 0.08);
+}
+
+.silk-topbar {
+    background: #18382a;
+    letter-spacing: 0.03em;
+}
+
+.silk-topbar .social-item-2 {
+    color: #f1e9dc;
+}
+
+.silk-topbar .social-item-2:hover {
+    color: var(--accent-color-2);
+}
+
+.silk-site-header .navbar {
+    background: var(--primary);
+}
+
+.silk-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--accent-color) !important;
+    line-height: 1;
+}
+
+.silk-brand:hover {
+    color: var(--accent-color-2) !important;
+}
+
+.silk-brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    border: 1px solid var(--accent-color-2);
+    border-radius: 50% 50% 50% 0;
+    color: var(--accent-color-2);
+    font-family: var(--font-1);
+    font-size: 1.35rem;
+    transform: rotate(-18deg);
+}
+
+.silk-brand-copy {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.18rem;
+}
+
+.silk-brand-name {
+    font-family: var(--font-1);
+    font-size: 1.45rem;
+    letter-spacing: 0.18em;
+}
+
+.silk-brand-subtitle {
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.42em;
+}
+
+.silk-site-header .nav-link {
+    letter-spacing: 0.02em;
+}
+
+.silk-site-header .dropdown-menu {
+    background: var(--primary);
+}
+
+.silk-site-footer {
+    background-color: #18382a;
+}
+
+.silk-site-footer .silk-footer-mark {
+    color: var(--accent-color-2);
+    font-family: var(--font-1);
+    font-size: 2rem;
+    letter-spacing: 0.15em;
+}
+
+.silk-site-footer .silk-footer-copy {
+    color: rgba(251, 250, 244, 0.72);
+    font-family: var(--font-3);
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+.silk-site-footer .link:hover,
+.silk-site-footer a:hover {
+    color: var(--accent-color-2) !important;
+}
+
+.silk-content-note {
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.silk-form-note {
+    border-left: 3px solid var(--accent-color-2);
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    padding-left: 1rem;
+}
+
+@media (max-width: 1199px) {
+    .silk-brand-name {
+        font-size: 1.25rem;
+    }
+
+    .silk-brand-mark {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.1rem;
+    }
+}
