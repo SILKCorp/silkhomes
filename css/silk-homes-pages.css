@@ -1,0 +1,1549 @@
+/* Shared treatment for the pages migrated from the original SILK Homes site. */
+
+.silk-legacy-page {
+    overflow: hidden;
+}
+
+.silk-legacy-page .page-header {
+    position: relative;
+    display: grid;
+    min-height: 28rem;
+    place-items: center;
+    margin: 0;
+    padding: 8rem 1rem 5rem !important;
+    background-image: linear-gradient(120deg, rgba(24, 56, 42, 0.92), rgba(47, 91, 66, 0.58)), var(--silk-page-hero, linear-gradient(135deg, #2f5b42, #18382a));
+    background-position: center;
+    background-size: cover;
+}
+
+.silk-card-fallback {
+    display: grid;
+    min-height: 12rem;
+    place-items: center;
+    background:
+        radial-gradient(circle at 25% 20%, rgba(228, 190, 102, 0.32), transparent 32%),
+        linear-gradient(135deg, #18382a, #2f5b42 58%, #826b42);
+    color: rgba(251, 250, 244, 0.92);
+    font-size: 2.5rem;
+}
+
+.silk-card-fallback.h-100 {
+    min-height: 100%;
+}
+
+.silk-legacy-page .page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.silk-legacy-page .page-title {
+    max-width: 52rem;
+    margin: 0 auto 1rem;
+    color: var(--primary);
+    font-family: var(--font-1);
+    font-size: clamp(2.65rem, 6vw, 5.2rem);
+    line-height: 1.05;
+}
+
+.silk-legacy-page .page-subtitle {
+    max-width: 42rem;
+    margin: 0 auto;
+    color: rgba(251, 250, 244, 0.88);
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.65;
+}
+
+.silk-legacy-page > section:not(.page-header) {
+    position: relative;
+}
+
+.silk-legacy-page h2,
+.silk-legacy-page h3,
+.silk-legacy-page h4,
+.silk-legacy-page h5,
+.silk-legacy-page h6 {
+    color: var(--text-color);
+}
+
+.silk-legacy-page .section-title {
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+}
+
+.silk-legacy-page .lead {
+    color: var(--text-color-2);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.silk-legacy-page .story-block,
+.silk-legacy-page .job-ad,
+.silk-legacy-page .property-card,
+.silk-legacy-page .property-gallery-card,
+.silk-legacy-page .location-card,
+.silk-legacy-page .pathway-card,
+.silk-legacy-page .contact-method,
+.silk-legacy-page .region-hero {
+    border: 1px solid rgba(47, 91, 66, 0.14);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: 0 1rem 2.5rem rgba(24, 56, 42, 0.08);
+}
+
+.silk-legacy-page .story-block,
+.silk-legacy-page .job-ad,
+.silk-legacy-page .region-hero {
+    padding: clamp(1.35rem, 3vw, 2.5rem);
+}
+
+.silk-legacy-page .story-block h3,
+.silk-legacy-page .job-title,
+.silk-legacy-page .property-content h4,
+.silk-legacy-page .property-gallery-content h4 {
+    color: var(--accent-color);
+    font-family: var(--font-1);
+}
+
+.silk-legacy-page .highlight {
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--accent-color-2);
+    background: rgba(230, 238, 229, 0.62);
+    color: var(--text-color);
+}
+
+.silk-legacy-page .property-card,
+.silk-legacy-page .property-gallery-card {
+    height: 100%;
+    overflow: hidden;
+}
+
+.silk-legacy-page .property-image,
+.silk-legacy-page .property-gallery-image,
+.silk-legacy-page .journal-image {
+    overflow: hidden;
+}
+
+.silk-legacy-page .property-image .legacy-image,
+.silk-legacy-page .property-gallery-image .legacy-image {
+    display: block;
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.35s ease;
+}
+
+.silk-legacy-page .property-card:hover .property-image .legacy-image,
+.silk-legacy-page .property-gallery-card:hover .property-gallery-image .legacy-image {
+    filter: saturate(1.05);
+    transform: scale(1.035);
+}
+
+.silk-legacy-page .property-content,
+.silk-legacy-page .property-gallery-content {
+    padding: 1.5rem;
+}
+
+.silk-legacy-page .property-features,
+.silk-legacy-page .property-amenities,
+.silk-legacy-page .job-section ul,
+.silk-legacy-page .comparison-section ul {
+    padding-left: 1.2rem;
+}
+
+.silk-legacy-page .property-features li,
+.silk-legacy-page .property-amenities li,
+.silk-legacy-page .job-section li,
+.silk-legacy-page .comparison-section li {
+    margin-bottom: 0.45rem;
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+}
+
+.silk-legacy-page .journal-entry {
+    padding: clamp(1.35rem, 3vw, 2.25rem);
+    border: 1px solid rgba(47, 91, 66, 0.14);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: 0 1rem 2.5rem rgba(24, 56, 42, 0.07);
+}
+
+.silk-legacy-page .journal-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.silk-legacy-page .journal-header h4 {
+    margin-bottom: 0.5rem;
+    font-family: var(--font-1);
+}
+
+.silk-legacy-page .journal-date,
+.silk-legacy-page .job-location,
+.silk-legacy-page .property-location-tag {
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.silk-legacy-page .journal-image {
+    margin-top: 1.25rem;
+}
+
+.silk-legacy-page .journal-image .legacy-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    border-radius: 0.75rem;
+    object-fit: cover;
+}
+
+/* Editorial story layout: each photograph is a framed visual partner to its
+   copy, never a bare image left to float beside a card. */
+.silk-legacy-page .story-feature {
+    row-gap: 2rem;
+    margin-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+.silk-legacy-page .story-feature:last-child {
+    margin-bottom: 0;
+}
+
+.silk-legacy-page .story-feature .story-block {
+    height: 100%;
+    margin-bottom: 0 !important;
+}
+
+.silk-legacy-page .story-feature .story-media {
+    position: relative;
+    height: 100%;
+    min-height: 20rem;
+}
+
+.silk-legacy-page .story-feature .story-media .silk-photo-frame {
+    min-height: 20rem;
+}
+
+.silk-legacy-page .story-feature .story-media img {
+    min-height: 20rem;
+    object-position: center;
+}
+
+@media (max-width: 991.98px) {
+    .silk-legacy-page .story-feature .story-media,
+    .silk-legacy-page .story-feature .story-media .silk-photo-frame,
+    .silk-legacy-page .story-feature .story-media img {
+        min-height: 17rem;
+    }
+}
+
+/* The Gallery page uses a deliberate 12-column mosaic instead of equal-width
+   rows. The asymmetry gives each image breathing room while keeping the set
+   aligned and responsive. */
+.silk-photo-mosaic {
+    display: grid;
+    grid-auto-rows: clamp(7.5rem, 10vw, 10rem);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Four-image editorial mosaics give a small curated set an intentional
+   rhythm without pretending it is a complete property catalog. */
+.silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(1),
+.silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(4) {
+    grid-column: span 7;
+    grid-row: span 2;
+}
+
+.silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(2),
+.silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(3) {
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.silk-photo-mosaic-item {
+    position: relative;
+    min-height: 12rem;
+    margin: 0;
+}
+
+.silk-photo-mosaic-item:nth-child(1),
+.silk-photo-mosaic-item:nth-child(7) {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.silk-photo-mosaic-item:nth-child(2),
+.silk-photo-mosaic-item:nth-child(8) {
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.silk-photo-mosaic-item:nth-child(3),
+.silk-photo-mosaic-item:nth-child(4),
+.silk-photo-mosaic-item:nth-child(5),
+.silk-photo-mosaic-item:nth-child(6),
+.silk-photo-mosaic-item:nth-child(9) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.silk-photo-mosaic-item:nth-child(7) {
+    grid-column: span 3;
+}
+
+.silk-photo-mosaic-item:nth-child(8) {
+    grid-column: span 5;
+}
+
+.silk-photo-mosaic-item:nth-child(9) {
+    grid-column: span 4;
+}
+
+.silk-photo-mosaic-item .silk-photo-frame {
+    min-height: 100%;
+}
+
+.silk-photo-mosaic-item figcaption {
+    position: absolute;
+    right: 0.85rem;
+    bottom: 0.75rem;
+    left: 0.85rem;
+    color: var(--primary);
+    font-family: var(--font-3);
+    font-size: 0.82rem;
+    line-height: 1.35;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+.silk-photo-mosaic-item figcaption::before {
+    position: absolute;
+    inset: -3rem -0.85rem -0.75rem;
+    background: linear-gradient(transparent, rgba(24, 56, 42, 0.7));
+    content: "";
+    z-index: -1;
+}
+
+/* Photo ribbons are a second editorial rhythm for pages that need more than
+   one visual anchor. The staggered heights keep the set lively without
+   turning it into an unstructured wall of images. */
+.silk-photo-ribbon {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.silk-photo-ribbon figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.silk-photo-ribbon figure:nth-child(2) {
+    margin-top: 2rem;
+}
+
+.silk-photo-ribbon figure:nth-child(3) {
+    margin-top: 0.65rem;
+}
+
+.silk-photo-ribbon .silk-photo-frame {
+    height: clamp(15rem, 24vw, 24rem);
+}
+
+.silk-photo-ribbon figure:first-child .silk-photo-frame {
+    height: clamp(19rem, 30vw, 30rem);
+}
+
+.silk-photo-ribbon figcaption {
+    margin-top: 0.7rem;
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+.silk-photo-ribbon figcaption strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* A compact visual note works well beside privacy, terms, contact, and other
+   information-led pages. It keeps the page human without interrupting the
+   task the reader came to complete. */
+.silk-text-visual {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.72fr);
+    gap: clamp(1.25rem, 4vw, 3rem);
+    align-items: center;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border: 1px solid rgba(47, 91, 66, 0.14);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(230, 238, 229, 0.82), rgba(251, 250, 244, 0.96));
+    box-shadow: 0 1rem 2.5rem rgba(24, 56, 42, 0.08);
+}
+
+.silk-text-visual .silk-photo-frame {
+    min-height: 15rem;
+}
+
+.silk-text-visual .eyebrow,
+.silk-photo-ribbon .eyebrow {
+    margin-bottom: 0.7rem;
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.silk-text-visual h2 {
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+}
+
+.silk-text-visual p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    .silk-photo-ribbon {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .silk-photo-ribbon figure:nth-child(n) {
+        margin-top: 0;
+    }
+
+    .silk-photo-ribbon figure:first-child {
+        grid-column: span 2;
+    }
+
+    .silk-text-visual {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .silk-photo-mosaic {
+        grid-auto-rows: clamp(9rem, 22vw, 14rem);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .silk-photo-mosaic-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .silk-photo-mosaic-item:nth-child(2),
+    .silk-photo-mosaic-item:nth-child(8) {
+        grid-column: span 2;
+    }
+
+    .silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+
+    .silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(2),
+    .silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(4) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .silk-photo-mosaic {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .silk-photo-mosaic-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: auto;
+        min-height: 15rem;
+    }
+
+    .silk-photo-mosaic--four .silk-photo-mosaic-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+
+    .silk-photo-ribbon {
+        grid-template-columns: 1fr;
+    }
+
+    .silk-photo-ribbon figure:first-child {
+        grid-column: auto;
+    }
+
+    .silk-photo-ribbon .silk-photo-frame,
+    .silk-photo-ribbon figure:first-child .silk-photo-frame {
+        height: 19rem;
+    }
+}
+
+.silk-legacy-page .job-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(47, 91, 66, 0.14);
+}
+
+.silk-legacy-page .job-section {
+    margin-bottom: 1.25rem;
+}
+
+.silk-legacy-page .job-section h5,
+.silk-legacy-page .contact-method h5,
+.silk-legacy-page .community-feature h5 {
+    color: var(--accent-color);
+    font-family: var(--font-1);
+}
+
+.silk-legacy-page .job-apply {
+    margin-top: 1.5rem;
+}
+
+.silk-legacy-page .region-hero {
+    background: linear-gradient(135deg, rgba(230, 238, 229, 0.85), rgba(251, 250, 244, 0.94));
+}
+
+.silk-legacy-page .region-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.silk-legacy-page .region-stat {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.silk-legacy-page .region-stat h3 {
+    margin-bottom: 0.35rem;
+    color: var(--accent-color-2);
+    font-family: var(--font-1);
+}
+
+.silk-legacy-page .region-stat p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.silk-legacy-page .community-feature,
+.silk-legacy-page .contact-method,
+.silk-legacy-page .location-card {
+    height: 100%;
+    padding: 1.35rem;
+}
+
+.silk-legacy-page .contact-method {
+    background: var(--primary);
+}
+
+.silk-legacy-page .contact-method a,
+.silk-legacy-page .footer-links a,
+.silk-legacy-page .property-gallery-card a {
+    color: var(--accent-color);
+}
+
+.silk-legacy-page .contact-method a:hover,
+.silk-legacy-page .footer-links a:hover,
+.silk-legacy-page .property-gallery-card a:hover {
+    color: var(--accent-color-2);
+}
+
+.silk-legacy-page .comparison-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.silk-legacy-page .what-we-are,
+.silk-legacy-page .what-we-arent {
+    padding: 1.5rem;
+    border-radius: 0.85rem;
+}
+
+.silk-legacy-page .what-we-are {
+    background: rgba(230, 238, 229, 0.8);
+}
+
+.silk-legacy-page .what-we-arent {
+    background: rgba(241, 233, 220, 0.8);
+}
+
+.silk-legacy-page .contact-info,
+.silk-legacy-page .contact-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.silk-legacy-page .contact-info {
+    flex-direction: column;
+}
+
+.silk-legacy-page .contact-icon {
+    color: var(--accent-color-2);
+    font-size: 1.5rem;
+}
+
+.silk-legacy-page .contact-details h6,
+.silk-legacy-page .contact-details p {
+    margin-bottom: 0.25rem;
+}
+
+.silk-legacy-page .contact-details h6 {
+    font-family: var(--font-1);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 767.98px) {
+    .silk-legacy-page .region-stat-grid,
+    .silk-legacy-page .comparison-section {
+        grid-template-columns: 1fr;
+    }
+
+    .silk-legacy-page .page-header {
+        min-height: 24rem;
+        padding-top: 7rem !important;
+    }
+}
+
+/* -------------------------------------------------------------------------
+   Join, stay planning, gallery, and day-in-the-life components
+   ------------------------------------------------------------------------- */
+
+.silk-legacy-page .eyebrow,
+.silk-eyebrow {
+    margin-bottom: 0.7rem;
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.silk-legacy-page .callout-box {
+    margin-right: auto;
+    margin-left: auto;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid rgba(198, 155, 74, 0.32);
+    border-left: 0.3rem solid var(--accent-color-2);
+    border-radius: 1.15rem;
+    background: linear-gradient(135deg, rgba(246, 240, 225, 0.94), rgba(230, 238, 229, 0.72));
+    box-shadow: 0 0.9rem 2rem rgba(24, 56, 42, 0.07);
+    text-align: left;
+}
+
+.silk-legacy-page .callout-box h2,
+.silk-legacy-page .callout-box h3,
+.silk-legacy-page .callout-box h5 {
+    margin-bottom: 0.55rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+}
+
+.silk-legacy-page .callout-box p:last-child {
+    margin-bottom: 0;
+}
+
+.silk-join-page .join-intro {
+    max-width: 52rem;
+}
+
+.silk-join-page .join-path-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+    margin-top: 2rem;
+}
+
+.silk-join-page .join-path-nav a {
+    display: flex;
+    min-height: 3.6rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(47, 91, 66, 0.18);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.76);
+    color: var(--accent-color);
+    font-family: var(--font-3);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+    transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.silk-join-page .join-path-nav a:hover,
+.silk-join-page .join-path-nav a:focus-visible {
+    border-color: var(--accent-color-2);
+    background: var(--accent-color-2);
+    color: var(--text-color);
+    transform: translateY(-0.15rem);
+}
+
+.silk-join-page .pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.silk-join-page .pathway-card {
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    gap: 1.05rem;
+    padding: clamp(1.35rem, 2.8vw, 2.15rem);
+    border: 1px solid rgba(47, 91, 66, 0.16);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 1rem 2.25rem rgba(24, 56, 42, 0.08);
+    isolation: isolate;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.silk-join-page .pathway-card:hover,
+.silk-join-page .pathway-card:focus-within {
+    border-color: rgba(198, 155, 74, 0.62);
+    box-shadow: 0 1.25rem 2.75rem rgba(24, 56, 42, 0.14);
+    transform: translateY(-0.25rem);
+}
+
+.silk-join-page .pathway-card.highlighted {
+    border-color: rgba(198, 155, 74, 0.76);
+    background: linear-gradient(145deg, rgba(246, 240, 225, 0.98), rgba(255, 255, 255, 0.96));
+    box-shadow: 0 1.25rem 2.75rem rgba(132, 102, 47, 0.14);
+}
+
+.silk-join-page .pathway-card-top {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-right: 6rem;
+}
+
+.silk-join-page .pathway-icon {
+    display: inline-grid;
+    width: 2.35rem;
+    height: 2.35rem;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgba(198, 155, 74, 0.58);
+    border-radius: 0.75rem;
+    background: rgba(198, 155, 74, 0.14);
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.silk-join-page .pathway-label,
+.silk-join-page .pathway-eyebrow {
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.silk-join-page .pathway-card h3 {
+    margin: 0;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: clamp(1.45rem, 2vw, 1.9rem);
+    line-height: 1.15;
+}
+
+.silk-join-page .pathway-subtitle {
+    margin: -0.55rem 0 0;
+    color: var(--text-color);
+    font-family: var(--font-3);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.silk-join-page .pathway-description {
+    margin-bottom: 0;
+    color: var(--text-color-2);
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.silk-join-page .pathway-requirements {
+    margin-top: 0.35rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(47, 91, 66, 0.13);
+}
+
+.silk-join-page .pathway-requirements h4 {
+    margin-bottom: 0.7rem;
+    color: var(--accent-color);
+    font-family: var(--font-3);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.silk-join-page .pathway-requirements ul,
+.silk-join-page .feature-card ul {
+    display: grid;
+    gap: 0.48rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.silk-join-page .pathway-requirements li {
+    position: relative;
+    padding-left: 1.35rem;
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.silk-join-page .pathway-requirements li::before {
+    position: absolute;
+    top: 0.36rem;
+    left: 0;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--accent-color-2);
+    content: "";
+}
+
+.silk-join-page .pathway-requirements li strong {
+    color: var(--text-color);
+}
+
+.silk-join-page .pathway-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    padding: 0.42rem 0.7rem;
+    border: 1px solid rgba(198, 155, 74, 0.55);
+    border-radius: 999px;
+    background: rgba(198, 155, 74, 0.14);
+    color: var(--accent-color);
+    font-family: var(--font-3);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.silk-join-page .pathway-cta {
+    display: flex;
+    margin-top: auto;
+    padding-top: 0.65rem;
+}
+
+.silk-join-page .pathway-cta .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.silk-join-page .feature-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1.35rem 1.15rem;
+    border: 1px solid rgba(47, 91, 66, 0.14);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 0.8rem 1.8rem rgba(24, 56, 42, 0.06);
+    text-align: center;
+}
+
+.silk-join-page .feature-icon {
+    display: grid;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0 auto 0.15rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--primary);
+    font-family: var(--font-1);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.silk-join-page .feature-card h3 {
+    margin: 0;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 1.15rem;
+}
+
+.silk-join-page .feature-card p {
+    margin: 0;
+    color: var(--text-color-2);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.silk-join-page .callout-box.warning {
+    border-left-color: var(--accent-color-4);
+    background: linear-gradient(135deg, rgba(241, 233, 220, 0.96), rgba(255, 255, 255, 0.86));
+}
+
+.silk-legacy-page .day-timeline {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+}
+
+.silk-legacy-page .timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    column-gap: 1rem;
+    align-items: start;
+    min-width: 0;
+    padding-bottom: 0.75rem;
+}
+
+.silk-legacy-page .timeline-item:not(:last-child)::before {
+    position: absolute;
+    top: 3.25rem;
+    bottom: -0.2rem;
+    left: 1.45rem;
+    width: 1px;
+    background: rgba(198, 155, 74, 0.45);
+    content: "";
+}
+
+.silk-legacy-page .timeline-marker {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    place-items: center;
+    border: 1px solid rgba(198, 155, 74, 0.65);
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--accent-color);
+    font-family: var(--font-3);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.silk-legacy-page .timeline-time {
+    grid-column: 2;
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.silk-legacy-page .timeline-content {
+    grid-column: 2;
+    padding: 1.2rem 1.35rem;
+    border: 1px solid rgba(47, 91, 66, 0.13);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 0.75rem 1.7rem rgba(24, 56, 42, 0.055);
+}
+
+.silk-legacy-page .timeline-content h3,
+.silk-legacy-page .timeline-content h5 {
+    margin-bottom: 0.45rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 1.25rem;
+}
+
+.silk-legacy-page .timeline-content p {
+    margin-bottom: 0.65rem;
+    color: var(--text-color-2);
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+.silk-legacy-page .timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+.silk-legacy-page .timeline-note {
+    color: var(--accent-color) !important;
+    font-family: var(--font-3);
+    font-size: 0.82rem !important;
+    font-style: italic;
+}
+
+.silk-join-page .principle-card,
+.silk-legacy-page .expectation-card,
+.silk-legacy-page .season-card {
+    height: 100%;
+    padding: 1.35rem;
+    border: 1px solid rgba(47, 91, 66, 0.14);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 0.75rem 1.7rem rgba(24, 56, 42, 0.055);
+}
+
+.silk-join-page .principle-card h3,
+.silk-join-page .principle-card h5,
+.silk-legacy-page .expectation-card h3,
+.silk-legacy-page .expectation-card h5,
+.silk-legacy-page .season-card h3,
+.silk-legacy-page .season-card h5 {
+    margin-bottom: 0.55rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+}
+
+.silk-join-page .principle-card p,
+.silk-legacy-page .expectation-card li,
+.silk-legacy-page .season-card p {
+    color: var(--text-color-2);
+    line-height: 1.65;
+}
+
+.silk-legacy-page .expectation-card ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.silk-legacy-page .season-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.silk-legacy-page .season-icon {
+    margin-bottom: 0.8rem;
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Compact, filterable gallery: equal visual weight keeps the selected set
+   readable and prevents one image from dominating the page. */
+
+.silk-gallery-page .silk-gallery-section {
+    background: linear-gradient(135deg, rgba(246, 240, 225, 0.72), rgba(230, 238, 229, 0.72));
+}
+
+.silk-gallery-page .silk-gallery-intro {
+    max-width: 46rem;
+}
+
+.silk-gallery-page .silk-gallery-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1.4rem 0 1.5rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(47, 91, 66, 0.14);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.silk-gallery-page .silk-gallery-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.silk-gallery-page .silk-gallery-filter {
+    min-height: 2.35rem;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid rgba(47, 91, 66, 0.18);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--accent-color);
+    font-family: var(--font-3);
+    font-size: 0.78rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.silk-gallery-page .silk-gallery-filter:hover,
+.silk-gallery-page .silk-gallery-filter:focus-visible,
+.silk-gallery-page .silk-gallery-filter[aria-pressed="true"] {
+    border-color: var(--accent-color);
+    background: var(--accent-color);
+    color: var(--primary);
+}
+
+.silk-gallery-page .silk-gallery-status {
+    margin: 0;
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.silk-gallery-page .silk-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+.silk-gallery-page .silk-gallery-card {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(47, 91, 66, 0.14);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 0.8rem 1.8rem rgba(24, 56, 42, 0.07);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.silk-gallery-page .silk-gallery-card:hover,
+.silk-gallery-page .silk-gallery-card:focus-within {
+    box-shadow: 0 1.1rem 2.3rem rgba(24, 56, 42, 0.13);
+    transform: translateY(-0.2rem);
+}
+
+.silk-gallery-page .silk-gallery-card[hidden] {
+    display: none;
+}
+
+.silk-gallery-page .silk-gallery-card .silk-photo-frame {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.silk-gallery-page .silk-gallery-card figcaption {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.95rem 1rem 1.1rem;
+}
+
+.silk-gallery-page .silk-gallery-card-category {
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.silk-gallery-page .silk-gallery-card strong {
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.silk-gallery-page .silk-gallery-card figcaption span:last-child {
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.silk-gallery-page .silk-gallery-note {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    border-radius: 0.85rem;
+    background: rgba(24, 56, 42, 0.07);
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.84rem;
+    line-height: 1.55;
+}
+
+/* Stay planning cards use a short, transparent quote message instead of
+   pretending that a conversation is a numeric nightly rate. */
+
+.silk-stay-planning .silk-stay-plans {
+    background: linear-gradient(135deg, rgba(246, 240, 225, 0.72), rgba(230, 238, 229, 0.66));
+}
+
+.silk-stay-planning .silk-stay-heading {
+    max-width: 45rem;
+    margin: 0 auto 2.25rem;
+    text-align: center;
+}
+
+.silk-stay-planning .silk-stay-heading h2 {
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: clamp(2rem, 4vw, 3.1rem);
+}
+
+.silk-stay-planning .silk-stay-heading p:last-child {
+    margin-bottom: 0;
+    color: var(--text-color-2);
+    line-height: 1.75;
+}
+
+.silk-stay-planning .silk-stay-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.silk-stay-planning .silk-stay-card {
+    display: flex;
+    min-width: 0;
+    min-height: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+    border: 1px solid rgba(47, 91, 66, 0.16);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 1rem 2.25rem rgba(24, 56, 42, 0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.silk-stay-planning .silk-stay-card:hover,
+.silk-stay-planning .silk-stay-card:focus-within {
+    border-color: rgba(198, 155, 74, 0.64);
+    box-shadow: 0 1.25rem 2.7rem rgba(24, 56, 42, 0.13);
+    transform: translateY(-0.2rem);
+}
+
+.silk-stay-planning .silk-stay-card--featured {
+    border-color: rgba(198, 155, 74, 0.72);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(246, 240, 225, 0.9));
+}
+
+.silk-stay-planning .silk-stay-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.silk-stay-planning .silk-stay-card-number {
+    color: var(--accent-color-2);
+    font-family: var(--font-1);
+    font-size: 1.35rem;
+}
+
+.silk-stay-planning .silk-stay-card-tag {
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.silk-stay-planning .silk-stay-card h3 {
+    margin: 0;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: clamp(1.45rem, 2.1vw, 1.9rem);
+    line-height: 1.15;
+}
+
+.silk-stay-planning .silk-stay-card > p {
+    min-height: 5.4rem;
+    margin: 0;
+    color: var(--text-color-2);
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+.silk-stay-planning .silk-stay-price {
+    display: grid;
+    gap: 0.18rem;
+    padding: 1rem;
+    border: 1px solid rgba(198, 155, 74, 0.3);
+    border-radius: 0.85rem;
+    background: rgba(246, 240, 225, 0.72);
+}
+
+.silk-stay-planning .silk-stay-price-label {
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.silk-stay-planning .silk-stay-price strong {
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.silk-stay-planning .silk-stay-price small {
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.76rem;
+    line-height: 1.4;
+}
+
+.silk-stay-planning .silk-stay-card h4 {
+    margin: 0;
+    color: var(--accent-color);
+    font-family: var(--font-3);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.silk-stay-planning .silk-stay-card ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.silk-stay-planning .silk-stay-card li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.silk-stay-planning .silk-stay-card li::before {
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    color: var(--accent-color-2);
+    content: "✓";
+    font-weight: 800;
+}
+
+.silk-stay-planning .silk-stay-card .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.silk-stay-planning .silk-pricing-note {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.25rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid rgba(47, 91, 66, 0.15);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.66);
+}
+
+.silk-stay-planning .silk-pricing-note-icon {
+    display: grid;
+    width: 2.45rem;
+    height: 2.45rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--primary);
+}
+
+.silk-stay-planning .silk-pricing-note h3 {
+    margin-bottom: 0.25rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 1.05rem;
+}
+
+.silk-stay-planning .silk-pricing-note p {
+    margin: 0;
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+/* A second image chapter gives the day page visual texture without turning it
+   into a wall of full-width photographs. */
+
+.silk-day-page .silk-day-scenes {
+    background: linear-gradient(135deg, rgba(246, 240, 225, 0.7), rgba(230, 238, 229, 0.7));
+}
+
+.silk-day-page .silk-day-scenes-heading {
+    max-width: 46rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.silk-day-page .silk-day-scenes-heading h2 {
+    margin-bottom: 0.7rem;
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.silk-day-page .silk-day-scenes-heading p:last-child {
+    margin-bottom: 0;
+    color: var(--text-color-2);
+    line-height: 1.7;
+}
+
+.silk-day-page .silk-day-scene-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.silk-day-page .silk-day-scene {
+    min-width: 0;
+    margin: 0;
+    padding: 0.65rem;
+    border: 1px solid rgba(47, 91, 66, 0.13);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 0.8rem 1.8rem rgba(24, 56, 42, 0.06);
+}
+
+.silk-day-page .silk-day-scene .silk-photo-frame {
+    height: clamp(12rem, 17vw, 17rem);
+    border-radius: 0.7rem;
+    box-shadow: none;
+}
+
+.silk-day-page .silk-day-scene figcaption {
+    display: grid;
+    gap: 0.3rem;
+    padding: 0.75rem 0.35rem 0.25rem;
+}
+
+.silk-day-page .silk-day-scene figcaption span {
+    color: var(--accent-color-2);
+    font-family: var(--font-3);
+    font-size: 0.67rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.silk-day-page .silk-day-scene figcaption strong {
+    color: var(--accent-color);
+    font-family: var(--font-1);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.silk-day-page .silk-day-scene figcaption p {
+    margin: 0;
+    color: var(--text-color-2);
+    font-family: var(--font-3);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 991.98px) {
+    .silk-join-page .join-path-nav,
+    .silk-gallery-page .silk-gallery-grid,
+    .silk-day-page .silk-day-scene-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .silk-stay-planning .silk-stay-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .silk-stay-planning .silk-stay-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .silk-legacy-page .season-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .silk-join-page .pathway-grid,
+    .silk-join-page .join-path-nav,
+    .silk-gallery-page .silk-gallery-grid,
+    .silk-stay-planning .silk-stay-card-grid,
+    .silk-day-page .silk-day-scene-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .silk-stay-planning .silk-stay-card:last-child {
+        grid-column: auto;
+    }
+
+    .silk-stay-planning .silk-stay-card > p {
+        min-height: 0;
+    }
+
+    .silk-stay-planning .silk-pricing-note {
+        grid-template-columns: auto 1fr;
+    }
+
+    .silk-stay-planning .silk-pricing-note .btn {
+        grid-column: 1 / -1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .silk-legacy-page .timeline-item {
+        grid-template-columns: 2.65rem minmax(0, 1fr);
+        column-gap: 0.75rem;
+    }
+
+    .silk-legacy-page .timeline-marker {
+        width: 2.45rem;
+        height: 2.45rem;
+        font-size: 0.62rem;
+    }
+
+    .silk-legacy-page .timeline-item:not(:last-child)::before {
+        left: 1.2rem;
+    }
+}
