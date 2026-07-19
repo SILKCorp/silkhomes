@@ -18,6 +18,7 @@
     <link rel="icon" type="image/x-icon" href="images/hero-bg.svg">
     <title>SILK Homes - Life at SILK Homes</title>
     <link rel="stylesheet" href="css/silk-homes-template-overrides.css">
+    <link rel="stylesheet" href="css/silk-homes-pages.css">
   <script type="speculationrules">
   {"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/404.html"}},{"not":{"selector_matches":"a[download]"}}]}}]}
   </script>
@@ -125,46 +126,80 @@
         </div>
 
         <!-- Section Activities -->
-        <div class="section" style="background: linear-gradient(135deg, rgba(230, 238, 229, 0.92), rgba(246, 240, 225, 0.92));">
-            <div class="r-container d-flex flex-column gap-3">
-                <div class="row row-cols-xl-2 row-cols-1 align-items-center">
-                    <div class="col scrollanimation animated zoomIn">
-                        <h6 class="accent-color-2">Living & Property Experiences</h6>
-                        <h3>Make space for work, care, rest, and discovery</h3>
-
-                    </div>
-                    <div class="col d-flex justify-content-end scrollanimation animated zoomIn">
-                        <p>
-                            The work of a SILK stay is intentionally open-ended. You can tend a garden, care for an
-                            old house, share a meal, explore a river town, or build a self-directed practice around
-                            the quiet that brought you here.
+        <section class="section silk-life-introduction" aria-labelledby="life-intro-title">
+            <div class="r-container">
+                <div class="silk-life-introduction-grid">
+                    <div class="silk-life-introduction-copy">
+                        <p class="silk-eyebrow">Living &amp; Property Experiences</p>
+                        <h2 id="life-intro-title">Make space for work, care, rest, and discovery.</h2>
+                        <p class="silk-life-introduction-lead">
+                            A SILK stay is open-ended by design. Settle into a furnished room, tend a garden, share a
+                            meal, explore a river town, or build a self-directed practice around the quiet that brought
+                            you here.
                         </p>
-                    </div>
-                </div>
-                <div class="row row-cols-xl-2 row-cols-1 h-100 scrollanimation animated fadeInLeft">
-                    <div class="col col-xl-8 mb-3">
-                        <div class="card card-overlay rounded-5 overflow-hidden h-100">
-                            <img src="image/silk-photo-activities-4.avif" alt="Sunlit furnished room with a sofa in a real SILK Homes property" class="img-fluid h-100" width="1200" height="800" loading="lazy" decoding="async" >
-                            <div class="card-body">
-                                <div
-                                    class="position-absolute d-flex flex-column gap-4 start-0 top-0 h-100 w-100 justify-content-between align-items-end p-5">
-                                    <a href="activities_detail.html" class="icon-box link">
-                                        <i class="rtmicon rtmicon-arrow-right" style="font-size: 30px;"></i>
-                                    </a>
-                                    <div class="position-relative p-4">
-                                        <div class="bg-blur"></div>
-                                        <div class="text-white" style="z-index: 4;">
-                                            <h4>A room to settle into</h4>
-                                            <p class="text-white m-0">A calm furnished room can support the ordinary work of arriving, unpacking, reading, and finding your own pace.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="silk-life-detail-list" aria-label="The SILK Homes rhythm">
+                            <div>
+                                <span class="silk-life-detail-number">01</span>
+                                <span>Arrive gently</span>
+                            </div>
+                            <div>
+                                <span class="silk-life-detail-number">02</span>
+                                <span>Make the home yours</span>
+                            </div>
+                            <div>
+                                <span class="silk-life-detail-number">03</span>
+                                <span>Move at human scale</span>
                             </div>
                         </div>
+                        <a href="activities_detail.html" class="silk-life-introduction-link">
+                            <span>Explore signature experiences</span>
+                            <i class="rtmicon rtmicon-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="silk-life-introduction-visual">
+                        <figure class="silk-life-image-card">
+                            <div class="silk-life-image-wrap">
+                                <img src="image/silk-photo-activities-4.avif" alt="Sunlit furnished room with a sofa in a real SILK Homes property" width="1200" height="800" loading="eager" decoding="async">
+                            </div>
+                            <figcaption class="silk-life-image-caption">
+                                <span class="silk-life-image-index">01</span>
+                                <span>
+                                    <strong>A room to settle into</strong>
+                                    <span>Space to arrive, unpack, read, and find your own pace.</span>
+                                </span>
+                            </figcaption>
+                        </figure>
+                        <aside class="silk-life-introduction-note">
+                            <span class="silk-eyebrow">The SILK rhythm</span>
+                            <p>Small practices become the architecture of a good stay.</p>
+                        </aside>
                     </div>
                 </div>
+                <div class="silk-life-principles" aria-label="Ways to experience a SILK home">
+                    <article class="silk-life-principle">
+                        <span class="silk-life-principle-number">A</span>
+                        <div>
+                            <h3>Settle</h3>
+                            <p>Start with a room that gives your attention somewhere kind to land.</p>
+                        </div>
+                    </article>
+                    <article class="silk-life-principle">
+                        <span class="silk-life-principle-number">B</span>
+                        <div>
+                            <h3>Participate</h3>
+                            <p>Care for the home, make something useful, or share the everyday work of welcome.</p>
+                        </div>
+                    </article>
+                    <article class="silk-life-principle">
+                        <span class="silk-life-principle-number">C</span>
+                        <div>
+                            <h3>Discover</h3>
+                            <p>Let the house open into its town, its seasons, and a slower way of noticing.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Section Counter -->
         <div class="section bg-accent-color-2">
