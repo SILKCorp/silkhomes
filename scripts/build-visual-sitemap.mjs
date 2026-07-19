@@ -352,7 +352,7 @@ function renderVisualSitemap(pages, generatedAt) {
     </script>
 </body>
 </html>
-`;
+`.replace(/[ \t]+$/gm, "");
 }
 
 async function main() {

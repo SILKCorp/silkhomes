@@ -1,5 +1,5 @@
 {
-  "generatedAt": "Jul 18, 2026, 10:36 PM",
+  "generatedAt": "Jul 19, 2026, 7:06 AM",
   "baseUrl": "http://127.0.0.1:8765",
   "pages": [
     {
@@ -105,7 +105,7 @@
       "group": "Root",
       "thumbnail": "cottages.avif",
       "width": 1440,
-      "height": 4148,
+      "height": 4184,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -129,7 +129,7 @@
       "group": "Root",
       "thumbnail": "gallery.avif",
       "width": 1440,
-      "height": 10826,
+      "height": 3399,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -153,7 +153,7 @@
       "group": "Root",
       "thumbnail": "price-plan.avif",
       "width": 1440,
-      "height": 3855,
+      "height": 3708,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -261,7 +261,7 @@
       "group": "Pages",
       "thumbnail": "pages-contact.avif",
       "width": 1440,
-      "height": 3780,
+      "height": 3778,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -273,7 +273,7 @@
       "group": "Pages",
       "thumbnail": "pages-crew.avif",
       "width": 1440,
-      "height": 5346,
+      "height": 5334,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -285,7 +285,7 @@
       "group": "Pages",
       "thumbnail": "pages-day-in-the-life.avif",
       "width": 1440,
-      "height": 5752,
+      "height": 7048,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -297,7 +297,7 @@
       "group": "Pages",
       "thumbnail": "pages-homes.avif",
       "width": 1440,
-      "height": 3668,
+      "height": 3835,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -309,7 +309,7 @@
       "group": "Pages",
       "thumbnail": "pages-join.avif",
       "width": 1440,
-      "height": 6958,
+      "height": 7169,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -333,7 +333,7 @@
       "group": "Pages",
       "thumbnail": "pages-living-simply.avif",
       "width": 1440,
-      "height": 7195,
+      "height": 7683,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -345,7 +345,7 @@
       "group": "Pages",
       "thumbnail": "pages-principles.avif",
       "width": 1440,
-      "height": 5388,
+      "height": 5376,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -357,7 +357,7 @@
       "group": "Pages",
       "thumbnail": "pages-privacy-policy.avif",
       "width": 1440,
-      "height": 6123,
+      "height": 6122,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -369,7 +369,7 @@
       "group": "Pages",
       "thumbnail": "pages-region.avif",
       "width": 1440,
-      "height": 6318,
+      "height": 6384,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -405,7 +405,7 @@
       "group": "Crew",
       "thumbnail": "pages-crew-cooking.avif",
       "width": 1440,
-      "height": 5080,
+      "height": 5068,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -417,7 +417,7 @@
       "group": "Crew",
       "thumbnail": "pages-crew-gardening.avif",
       "width": 1440,
-      "height": 4619,
+      "height": 4608,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -429,7 +429,7 @@
       "group": "Crew",
       "thumbnail": "pages-crew-handyman.avif",
       "width": 1440,
-      "height": 5603,
+      "height": 5591,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -441,7 +441,7 @@
       "group": "Crew",
       "thumbnail": "pages-crew-housekeeping.avif",
       "width": 1440,
-      "height": 4991,
+      "height": 4980,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -453,7 +453,7 @@
       "group": "Crew",
       "thumbnail": "pages-crew-landscaping.avif",
       "width": 1440,
-      "height": 4749,
+      "height": 4737,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -465,7 +465,7 @@
       "group": "Crew",
       "thumbnail": "pages-crew-live-in.avif",
       "width": 1440,
-      "height": 6002,
+      "height": 5990,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -477,7 +477,7 @@
       "group": "Crew · Locations",
       "thumbnail": "pages-crew-landscaping-marietta.avif",
       "width": 1440,
-      "height": 4276,
+      "height": 4264,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -489,7 +489,7 @@
       "group": "Crew · Locations",
       "thumbnail": "pages-crew-landscaping-parkersburg.avif",
       "width": 1440,
-      "height": 4357,
+      "height": 4346,
       "status": 200,
       "ok": true,
       "errorCount": 0
@@ -501,7 +501,7 @@
       "group": "Crew · Locations",
       "thumbnail": "pages-crew-landscaping-ravenswood.avif",
       "width": 1440,
-      "height": 4357,
+      "height": 4346,
       "status": 200,
       "ok": true,
       "errorCount": 0
