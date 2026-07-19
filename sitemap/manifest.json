@@ -1,5 +1,5 @@
 {
-  "generatedAt": "Jul 19, 2026, 9:03 AM",
+  "generatedAt": "Jul 19, 2026, 11:29 AM",
   "baseUrl": "http://127.0.0.1:8765",
   "pages": [
     {
@@ -237,7 +237,7 @@
       "group": "Locations",
       "thumbnail": "locations-ravenswood.avif",
       "width": 1440,
-      "height": 6771,
+      "height": 6747,
       "status": 200,
       "ok": true,
       "errorCount": 0
