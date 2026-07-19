@@ -4,19 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SILK Homes offers peaceful furnished homes, thoughtful hospitality, and intentional living across the Mid-Ohio Valley.">
+    <meta name="theme-color" content="#18382a">
+    <link rel="canonical" href="https://silkhomes.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SILK Homes - Homepage">
+    <meta property="og:description" content="SILK Homes offers peaceful furnished homes, thoughtful hospitality, and intentional living across the Mid-Ohio Valley.">
+    <meta property="og:url" content="https://silkhomes.org/">
+    <meta property="og:image" content="https://silkhomes.org/image/silk-hero-home.avif">
+    <link rel="preload" as="image" href="image/silk-hero-home.avif" type="image/avif">
     <link rel="stylesheet" href="css/silk-homes-template.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.4/animation_utility.css">
-    <link rel="stylesheet" href="css/vendor/image-compare.css">
+<link rel="stylesheet" href="css/vendor/image-compare.css">
     <link rel="icon" type="image/x-icon" href="images/hero-bg.svg">
     <title>SILK Homes - Homepage</title>
     <link rel="stylesheet" href="css/silk-homes-template-overrides.css">
+  <script type="speculationrules">
+  {"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/404.html"}},{"not":{"selector_matches":"a[download]"}}]}}]}
+  </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- Scripts -->
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/image_compare.js"></script>
+    <script src="js/vendor/jquery.min.js" defer></script>
+    <script src="js/image_compare.js" defer></script>
 
     <!-- Header -->
     <header class="section p-0 sticky-top bg-accent-primary overflow-visible silk-site-header">
@@ -47,42 +58,42 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pages/story.html">Our Story</a></li>
-                                <li><a class="dropdown-item" href="pages/principles.html">Our Principles</a></li>
-                                <li><a class="dropdown-item" href="pages/community.html">Community &amp; Affiliations</a></li>
-                                <li><a class="dropdown-item" href="pages/journal.html">SILK Homes Journal</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/story.html">Our Story</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/principles.html">Our Principles</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/community.html">Community &amp; Affiliations</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/journal.html">SILK Homes Journal</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Living</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="cottages.html">Explore Our Homes</a></li>
-                                <li><a class="dropdown-item" href="pages/homes.html">Current Properties</a></li>
-                                <li><a class="dropdown-item" href="pages/living-simply.html">Living Simply</a></li>
-                                <li><a class="dropdown-item" href="pages/day-in-the-life.html">A Day in the Life</a></li>
-                                <li><a class="dropdown-item" href="pages/region.html">The Mid-Ohio Valley</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="cottages.html">Explore Our Homes</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/homes.html">Current Properties</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/living-simply.html">Living Simply</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/day-in-the-life.html">A Day in the Life</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/region.html">The Mid-Ohio Valley</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="locations/ravenswood.html">Ravenswood, WV</a></li>
-                                <li><a class="dropdown-item" href="locations/parkersburg.html">Parkersburg, WV</a></li>
-                                <li><a class="dropdown-item" href="locations/marietta.html">Marietta, OH</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="locations/ravenswood.html">Ravenswood, WV</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="locations/parkersburg.html">Parkersburg, WV</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="locations/marietta.html">Marietta, OH</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Experiences</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="activities.html">Life at SILK Homes</a></li>
-                                <li><a class="dropdown-item" href="activities_detail.html">Signature Experiences</a></li>
-                                <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
-                                <li><a class="dropdown-item" href="price_plan.html">Stay Planning</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="activities.html">Life at SILK Homes</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="activities_detail.html">Signature Experiences</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="gallery.html">Gallery</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="price_plan.html">Stay Planning</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Connect</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="appointment.html">Ask About Availability</a></li>
-                                <li><a class="dropdown-item" href="contact.html">Contact SILK Homes</a></li>
-                                <li><a class="dropdown-item" href="pages/join.html">How to Join</a></li>
-                                <li><a class="dropdown-item" href="pages/crew.html">Crew Opportunities</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="appointment.html">Ask About Availability</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="contact.html">Contact SILK Homes</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/join.html">How to Join</a></li>
+                                <li><a class="dropdown-item" data-silk-nav href="pages/crew.html">Crew Opportunities</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" data-silk-nav href="blog.html">Journal</a></li>
@@ -95,9 +106,9 @@
     <!-- End Header -->
 
     <!-- Main -->
-    <main>
+    <main id="main">
         <!-- Banner -->
-        <div class="section position-relative bg-attach-cover" style="background-image: url(image/dummy-img-1920x900.jpg);">
+        <div class="section position-relative bg-attach-cover" style="background-image: url(image/silk-hero-home.avif);">
             <div class="bg-overlay"></div>
             <div class="r-container position-relative d-flex flex-column gap-3 align-items-center" style="z-index: 4;">
                 <div class="d-flex flex-column gap-4 align-items-center justify-content-center text-center mx-auto py-5 scrollanimation animated zoomIn"
@@ -105,7 +116,7 @@
                     <h6 class="accent-color-2">Intentional Living</h6>
                     <h1 class="text-white">A Home Base for Intentional Living</h1>
                     <p class="text-white">
-                        SILK Homes offers peaceful furnished homes across the Mid-Ohio Valley for people seeking a calm home base, meaningful connection, and room to live intentionally.
+                        SILK Homes offers peaceful furnished homes across the Mid-Ohio Valley and a wider family of places in Costa Rica, the Philippines, and the Virgin Islands—for people seeking a calm home base, meaningful connection, and room to live intentionally.
                     </p>
                     <div class="d-flex flex-xl-row flex-column align-items-center gap-4">
                         <a href="contact.html" class="btn btn-accent d-flex flex-row gap-4 px-5 py-3">
@@ -119,34 +130,34 @@
                 <div class="row row-cols-xl-4 row-cols-1 w-100">
                     <div class="col d-flex flex-column align-items-center gap-4 mb-3">
                         <div class="d-flex justify-content-center">
-                            <h1 class="accent-color-2 number" data-target="3" data-duration="1000">0</h1>
+                            <span class="silk-stat-word">Global</span>
                         </div>
-                        <h6 class="text-white">Valley towns</h6>
+                        <h6 class="text-white">Home regions</h6>
                     </div>
                     <div class="col d-flex flex-column align-items-center gap-4 mb-3">
                         <div class="d-flex justify-content-center">
-                            <h1 class="accent-color-2 number" data-target="4" data-duration="1000">0</h1>
+                            <span class="silk-stat-word">Seasonal</span>
                         </div>
-                        <h6 class="text-white">Seasons to experience</h6>
+                        <h6 class="text-white">Ways to live</h6>
                     </div>
                     <div class="col d-flex flex-column align-items-center gap-4 mb-3">
                         <div class="d-flex justify-content-center">
-                            <h1 class="accent-color-2 number" data-target="1" data-duration="1000">0</h1>
+                            <span class="silk-stat-word">Growing</span>
                         </div>
-                        <h6 class="text-white">Living network</h6>
+                        <h6 class="text-white">SILK network</h6>
                     </div>
                     <div class="col d-flex flex-column align-items-center gap-4 mb-3">
                         <div class="d-flex justify-content-center">
-                            <h1 class="accent-color-2 number" data-target="6" data-duration="1000">0</h1>
+                            <span class="silk-stat-word">Human</span>
                         </div>
-                        <h6 class="text-white">Crew pathways</h6>
+                        <h6 class="text-white">Care behind every stay</h6>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section About Us -->
-        <div class="section bg-attach-cover" style="background-image: url(image/bg_about.png);">
+        <div class="section bg-attach-cover" style="background: linear-gradient(135deg, rgba(230, 238, 229, 0.92), rgba(246, 240, 225, 0.92));">
             <div class="r-container">
                 <div class="row row-cols-xl-2 row-cols-1">
                     <div class="col col-xl-5 scrollanimation animated fadeInLeft">
@@ -169,7 +180,7 @@
                         <div class="row row-cols-xl-2 row-cols-1">
                             <div class="col col-xl-8">
                                 <div class="position-relative h-100">
-                                    <img src="image/dummy-img-600x600.jpg" class="img-fluid rounded-5 h-100" alt="">
+                                    <img src="image/silk-photo-home-1.avif" class="img-fluid rounded-5 h-100" alt="A lived-in interior detail from a real SILK Homes property" width="1200" height="800" loading="lazy" decoding="async" >
                                     <div class="custom-border bg-white position-absolute bottom-0 start-0">
                                         <button type="button" class="request-loader" data-bs-toggle="modal"
                                             data-bs-target="#e119">
@@ -217,54 +228,68 @@
         </div>
 
         <!-- Homes -->
-        <div class="section" style="background-image: url(image/bg_feature.png);">
+        <div class="section" style="background: linear-gradient(135deg, rgba(230, 238, 229, 0.92), rgba(246, 240, 225, 0.92));">
             <div class="r-container d-flex flex-column gap-3">
                 <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center"
                     style="max-width: 700px;">
-                    <h6 class="accent-color-2">Featured SILK Homes</h6>
-                    <h3>Thoughtfully Restored SILK Homes</h3>
-                    <p>Each SILK home carries its own history, character, and rhythm. We prepare every space with practical comfort so you can settle in, work, rest, cook, and participate at your own pace.</p>
+                    <h6 class="accent-color-2">Featured SILK Home Views</h6>
+                    <h3>Homes with their own rhythm</h3>
+                    <p>Each SILK home carries its own history, character, and rhythm. These selected views show the spaces around a stay—the rooms, thresholds, work areas, and seasonal edges that help a place feel lived in.</p>
                 </div>
-                <div class="accordion-container">
-                    <div class="accordion-item position-relative" style="background-image: url('image/dummy-img-900x600.jpg');">
+                <div class="accordion-container silk-home-card-grid">
+                    <div class="accordion-item position-relative silk-home-card">
+                        <img class="silk-home-card-image" src="image/silk-photo-pages-homes-2.avif" alt="Current furnished bedroom in a real SILK Homes property" width="1200" height="800" loading="lazy" decoding="async">
                         <div class="bg-overlay"></div>
                         <div class="d-flex flex-column justify-content-between align-items-end text-white position-relative h-100"
                             style="z-index: 4; padding: 40px;">
-                            <a href="pages/homes.html" class="icon-box link">
+                            <a href="pages/homes.html" class="icon-box link" aria-label="Explore rooms in SILK Homes">
                                 <i class="rtmicon rtmicon-arrow-right" style="font-size: 30px;"></i>
                             </a>
                             <div class="d-flex flex-column gap-4 w-100">
-                                <h4>Ravenswood Home Cluster</h4>
-                                <p class="text-white" style="max-width: 400px;">A cluster of character-rich historic
-                                    homes in Ravenswood—the heart of the SILK Homes network.</p>
+                                <h4>A room to settle into</h4>
+                                <p class="text-white" style="max-width: 400px;">A current furnished room with light, storage, and the quiet needed to make a place your own.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item position-relative" style="background-image: url('image/dummy-img-900x600.jpg');">
+                    <div class="accordion-item position-relative silk-home-card">
+                        <img class="silk-home-card-image" src="image/silk-photo-pages-homes-5.avif" alt="Historic hallway detail in a real SILK Homes property" width="1200" height="800" loading="lazy" decoding="async">
                         <div class="bg-overlay"></div>
                         <div class="d-flex flex-column justify-content-between align-items-end text-white position-relative h-100"
                             style="z-index: 4; padding: 40px;">
-                            <a href="locations/parkersburg.html" class="icon-box link">
+                            <a href="gallery.html" class="icon-box link" aria-label="See more SILK home details">
                                 <i class="rtmicon rtmicon-arrow-right" style="font-size: 30px;"></i>
                             </a>
                             <div class="d-flex flex-column gap-4 w-100">
-                                <h4>Parkersburg River Town Homes</h4>
-                                <p class="text-white" style="max-width: 400px;">A practical river-town home base with
-                                    access to work, services, local life, and the Ohio River.</p>
+                                <h4>Thresholds with character</h4>
+                                <p class="text-white" style="max-width: 400px;">The small transitions—doors, hallways, stairs—are part of how a historic home feels.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item position-relative" style="background-image: url('image/dummy-img-900x600.jpg');">
+                    <div class="accordion-item position-relative silk-home-card">
+                        <img class="silk-home-card-image" src="image/silk-photo-pages-homes-6.avif" alt="Useful activity room in a real SILK Homes property" width="1200" height="800" loading="lazy" decoding="async">
                         <div class="bg-overlay"></div>
                         <div class="d-flex flex-column justify-content-between align-items-end text-white position-relative h-100"
                             style="z-index: 4; padding: 40px;">
-                            <a href="locations/marietta.html" class="icon-box link">
+                            <a href="activities.html" class="icon-box link" aria-label="Explore life and activity spaces">
                                 <i class="rtmicon rtmicon-arrow-right" style="font-size: 30px;"></i>
                             </a>
                             <div class="d-flex flex-column gap-4 w-100">
-                                <h4>Marietta Historic Homes</h4>
-                                <p class="text-white" style="max-width: 400px;">Historic Marietta homes shaped for slow
-                                    mornings, thoughtful work, and a closer relationship with place.</p>
+                                <h4>Space to move and work</h4>
+                                <p class="text-white" style="max-width: 400px;">Useful space for movement, focus, and the projects that fill a lived-in day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item position-relative silk-home-card">
+                        <img class="silk-home-card-image" src="image/silk-photo-pages-homes-7.avif" alt="Seasonal wooded view from a real SILK Homes property" width="1200" height="800" loading="lazy" decoding="async">
+                        <div class="bg-overlay"></div>
+                        <div class="d-flex flex-column justify-content-between align-items-end text-white position-relative h-100"
+                            style="z-index: 4; padding: 40px;">
+                            <a href="pages/region.html" class="icon-box link" aria-label="Explore the region around SILK Homes">
+                                <i class="rtmicon rtmicon-arrow-right" style="font-size: 30px;"></i>
+                            </a>
+                            <div class="d-flex flex-column gap-4 w-100">
+                                <h4>Seasonal edges</h4>
+                                <p class="text-white" style="max-width: 400px;">A window onto winter reminds us that a home includes weather, grounds, and changing light.</p>
                             </div>
                         </div>
                     </div>
@@ -273,16 +298,16 @@
         </div>
 
         <!-- Why Choose Us -->
-        <div class="section bg-attach-cover" style="background-image: url(image/bg_about.png);">
+        <div class="section bg-attach-cover" style="background: linear-gradient(135deg, rgba(230, 238, 229, 0.92), rgba(246, 240, 225, 0.92));">
             <div class="r-container">
                 <div class="row row-cols-xl-2 row-cols-1">
                     <div class="col mb-xl-0 mb-4 scrollanimation animated fadeInRight">
                         <div class="position-relative h-100">
-                            <img src="image/dummy-img-600x700.jpg" class="img-fluid rounded-5 h-100 w-100" alt="">
+                            <img src="image/silk-photo-home-5.avif" class="img-fluid rounded-5 h-100 w-100" alt="Bright furnished bedroom in a current SILK Homes property" width="1200" height="800" loading="lazy" decoding="async" >
                             <div class="custom-border-2 bg-accent position-absolute top-0 start-0">
                                 <div class="bg-accent-color p-3 text-center rounded-5">
-                                    <h2 class="text-white">3</h2>
-                                    <h6 class="accent-color-2">Valley towns</h6>
+                                    <h2 class="text-white">Global</h2>
+                                    <h6 class="accent-color-2">Home regions</h6>
                                 </div>
                             </div>
                         </div>
@@ -337,51 +362,15 @@
                 <div class="d-flex justify-content-center align-items-center w-100">
                     <div class="swiper swiperPartner">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo1.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo2.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo3.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo4.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo5.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo1.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo2.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo3.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide p-0">
-                                <div class="d-flex justify-content-center">
-                                    <img src="image/Logo4.png" class="img-fluid" alt="image">
-                                </div>
-                            </div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Historic homes</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Shared gardens</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Thoughtful stays</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Mid-Ohio Valley</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">SILK community</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Historic homes</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Shared gardens</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Thoughtful stays</div></div>
+                            <div class="swiper-slide p-0"><div class="silk-network-label">Mid-Ohio Valley</div></div>
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
@@ -391,7 +380,7 @@
         </div>
 
         <!-- Section Activities -->
-        <div class="section" style="background-image: url(image/bg_service.png);">
+        <div class="section" style="background: linear-gradient(135deg, rgba(230, 238, 229, 0.92), rgba(246, 240, 225, 0.92));">
             <div class="r-container d-flex flex-column gap-3">
                 <div class="row row-cols-xl-2 row-cols-1 align-items-center">
                     <div class="col col-xl-8 scrollanimation animated zoomIn">
@@ -414,7 +403,7 @@
                 <div class="row row-cols-xl-2 row-cols-1 h-100 scrollanimation animated fadeInRight">
                     <div class="col col-xl-8 mb-3">
                         <div class="card card-overlay rounded-5 overflow-hidden h-100">
-                            <img src="image/dummy-img-1920x900.jpg" alt="" class="img-fluid h-100">
+                            <img src="image/silk-activity-garden.avif" alt="Fall garden and grounds around a real SILK Homes property" class="img-fluid h-100" width="1200" height="800" loading="lazy" decoding="async" >
                             <div class="card-body">
                                 <div
                                     class="position-absolute d-flex flex-column gap-4 start-0 top-0 h-100 w-100 justify-content-between align-items-end p-5">
@@ -434,7 +423,7 @@
                     </div>
                     <div class="col col-xl-4 mb-3">
                         <div class="card card-overlay rounded-5 overflow-hidden h-100">
-                            <img src="image/dummy-img-600x600.jpg" alt="" class="img-fluid h-100">
+                            <img src="image/silk-activity-yoga.avif" alt="Wooden practice deck surrounded by garden growth at a real SILK Homes property" class="img-fluid h-100" width="1200" height="800" loading="lazy" decoding="async" >
                             <div class="card-body">
                                 <div
                                     class="position-absolute d-flex flex-column gap-4 start-0 top-0 h-100 w-100 justify-content-between align-items-end p-5">
@@ -444,8 +433,8 @@
                                     <div class="position-relative p-4">
                                         <div class="bg-blur"></div>
                                         <div class="text-white" style="z-index: 4;">
-                                            <h4>Gardening and Herb Growing</h4>
-                                            <p class="text-white m-0">A small, practical invitation to notice what the land and season are asking for.</p>
+                                            <h4>Yoga and quiet practice</h4>
+                                            <p class="text-white m-0">A sheltered deck and living landscape make room for a slower morning, a stretch, or a self-directed practice.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -457,7 +446,7 @@
 
                     <div class="col col-xl-4 mb-3">
                         <div class="card card-overlay rounded-5 overflow-hidden h-100">
-                            <img src="image/dummy-img-600x600.jpg" alt="" class="img-fluid h-100">
+                            <img src="image/silk-photo-porch-nook.avif" alt="Covered rainforest porch overlooking the rainforest in Platanillo, Costa Rica" class="img-fluid h-100" width="1200" height="800" loading="lazy" decoding="async" >
                             <div class="card-body">
                                 <div
                                     class="position-absolute d-flex flex-column gap-4 start-0 top-0 h-100 w-100 justify-content-between align-items-end p-5">
@@ -467,8 +456,8 @@
                                     <div class="position-relative p-4">
                                         <div class="bg-blur"></div>
                                         <div class="text-white" style="z-index: 4;">
-                                            <h4>Gardening and Herb Growing</h4>
-                                            <p class="text-white m-0">A small, practical invitation to notice what the land and season are asking for.</p>
+                                            <h4>Rainforest quiet in Platanillo</h4>
+                                            <p class="text-white m-0">This covered porch in Platanillo, Costa Rica looks over the rainforest—an invitation to breathe, read, and let the day slow down.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -477,7 +466,7 @@
                     </div>
                     <div class="col col-xl-8 mb-3">
                         <div class="card card-overlay rounded-5 overflow-hidden h-100">
-                            <img src="image/dummy-img-1920x900.jpg" alt="" class="img-fluid h-100">
+                            <img src="image/silk-photo-home-6.avif" alt="A quiet window-side chair in a real SILK Homes property" class="img-fluid h-100" width="1200" height="800" loading="lazy" decoding="async" >
                             <div class="card-body">
                                 <div
                                     class="position-absolute d-flex flex-column gap-4 start-0 top-0 h-100 w-100 justify-content-between align-items-end p-5">
@@ -487,8 +476,8 @@
                                     <div class="position-relative p-4">
                                         <div class="bg-blur"></div>
                                         <div class="text-white" style="z-index: 4;">
-                                            <h4>Gardening and Herb Growing</h4>
-                                            <p class="text-white m-0">Tend productive gardens, learn the seasonal rhythm of a property, and leave a home more cared for than you found it.</p>
+                                            <h4>A quiet corner for practice</h4>
+                                            <p class="text-white m-0">A window-side chair can become a reading nook, a place to think, or a simple pause between the other parts of a lived-in day.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -500,7 +489,7 @@
         </div>
 
         <!-- Section Services -->
-        <div class="section" style="background-image: url(image/bg_service.png);">
+        <div class="section" style="background: linear-gradient(135deg, rgba(230, 238, 229, 0.92), rgba(246, 240, 225, 0.92));">
             <div class="r-container d-flex flex-column gap-3 align-items-center">
                 <div class="d-flex flex-column gap-3 justify-content-center align-items-center mx-auto text-center"
                     style="max-width: 667px;">
@@ -600,7 +589,7 @@
                     <div class="row row-cols-xl-2 row-cols-1">
                         <div class="col mb-xl-0 mb-4 scrollanimation animated fadeInLeft">
                             <div class="position-relative h-100">
-                                <img src="image/dummy-img-600x600.jpg" class="img-fluid rounded-5 h-100 w-100" alt="">
+                                <img src="image/silk-photo-home-7.avif" class="img-fluid rounded-5 h-100 w-100" alt="Furnished arrival detail in a real SILK Homes property" width="1200" height="800" loading="lazy" decoding="async" >
                                 <div class="custom-border-3 bg-accent position-absolute bottom-0 end-0 w-50">
                                     <div class="overflow-hidden h-50 rounded-5" style="object-fit: cover;">
                                         <div class="position-relative h-100 overflow-hidden">
@@ -614,7 +603,7 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <img src="image/dummy-img-600x400.jpg" alt="image" class="w-100 h-100 img-fluid">
+                                            <img src="image/silk-photo-home-8.avif" alt="A snowy garden and neighboring homes viewed from a SILK Homes property" class="w-100 h-100 img-fluid" width="1200" height="800" loading="lazy" decoding="async" >
                                         </div>
                                         <div class="modal fade bg-overlay" id="e119" tabindex="-1" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -648,8 +637,7 @@
                                                         class="d-flex flex-row justify-content-between align-items-center">
                                                         <div class="d-flex flex-row align-items-center gap-3">
                                                             <div class="testimonial-item">
-                                                                <img src="image/dummy-img-400x400.jpg"
-                                                                    class="img-fluid border-light" alt="">
+                                                                <span class="silk-initial-avatar" aria-hidden="true">A</span>
                                                             </div>
                                                             <div class="d-flex flex-column">
                                                                 <h5>Arrival & belonging</h5>
@@ -672,8 +660,7 @@
                                                         class="d-flex flex-row justify-content-between align-items-center">
                                                         <div class="d-flex flex-row align-items-center gap-3">
                                                             <div class="testimonial-item">
-                                                                <img src="image/dummy-img-400x400.jpg"
-                                                                    class="img-fluid border-light" alt="">
+                                                                <span class="silk-initial-avatar" aria-hidden="true">B</span>
                                                             </div>
                                                             <div class="d-flex flex-column">
                                                                 <h5>Home that works</h5>
@@ -694,8 +681,7 @@
                                                         class="d-flex flex-row justify-content-between align-items-center">
                                                         <div class="d-flex flex-row align-items-center gap-3">
                                                             <div class="testimonial-item">
-                                                                <img src="image/dummy-img-400x400.jpg"
-                                                                    class="img-fluid border-light" alt="">
+                                                                <span class="silk-initial-avatar" aria-hidden="true">C</span>
                                                             </div>
                                                             <div class="d-flex flex-column">
                                                                 <h5>Room for connection</h5>
@@ -720,7 +706,7 @@
         </div>
 
         <!-- Section CTA -->
-        <div class="section position-relative overflow-visible" style="background-image: url(image/dummy-img-1920x900.jpg);">
+        <div class="section position-relative overflow-visible" style="background-image: linear-gradient(135deg, rgba(24, 56, 42, 0.96), rgba(47, 91, 66, 0.78));">
             <div class="image-overlay"></div>
             <div class="r-container position-relative" style="z-index: 4;">
                 <div class="d-flex flex-column gap-3 text-white text-center justify-content-center align-items-center mx-auto scrollanimation animated zoomIn"
@@ -745,10 +731,10 @@
                 <div class="row row-cols-xl-2 row-cols-1 align-items-center">
                     <div class="col col-xl-8 scrollanimation animated zoomIn">
                         <h6 class="accent-color-2">SILK Homes Journal</h6>
-                        <h3>Notes on intentional living, home stewardship, and the Mid-Ohio Valley</h3>
+                        <h3>Notes on intentional living, home stewardship, and the places SILK calls home</h3>
                         <p>
                             Read notes on intentional living, home stewardship, seasonal work, crew life, and the
-                            Mid-Ohio Valley communities around our homes.
+                            From rainforest porches and island quiet to Mid-Ohio Valley river towns, read notes on home stewardship, seasonal work, crew life, and peaceful hospitality.
                         </p>
                     </div>
                     <div class="col col-xl-4 d-flex justify-content-end scrollanimation animated zoomIn">
@@ -763,17 +749,16 @@
                     <div class="col mb-3 scrollanimation animated fadeInLeft">
                         <div class="card d-flex flex-column gap-3">
                             <div class="position-relative overflow-hidden rounded-3">
-                                <img src="image/dummy-img-900x600.jpg" alt="image" class="img-fluid">
+                                    <img src="image/silk-photo-bridge.avif" alt="River bridge and evening landscape near a SILK Homes town" class="img-fluid silk-journal-card-image" width="1200" height="800" loading="lazy" decoding="async" >
                                 <div class="blog-overlay"></div>
                                 <div class="position-absolute top-0 end-0 px-4 py-4 bg-accent-color-2 rounded-4"
                                     style="margin-top: 1rem; margin-right: 1rem;">
-                                    <span class="text-white">News</span>
+                                    <span class="text-white">Places</span>
                                 </div>
                                 <div class="position-absolute bottom-0 left-0 text-white p-5">
                                     <h4>Five Ways to Find Your Rhythm in the Mid-Ohio Valley</h4>
                                     <div class="d-flex flex-column gap-1 mb-3">
-                                        <p class="text-white">Explore the places, practices, and small-town rhythms that make a SILK stay meaningful. Create
-                                            unforgettable memories just minutes from your doorstep.
+                                        <p class="text-white">Follow the river, the bridges, the markets, and the small-town rhythms that make a SILK stay feel rooted in place.
                                         </p>
                                         <a href="single_blog.html" class="font-1 fs-5 read-more">Read More<i
                                                 class="rtmicon rtmicon-chevron-right fw-bold fs-6"></i></a>
@@ -785,16 +770,16 @@
                     <div class="col mb-3 scrollanimation animated fadeInRight">
                         <div class="card d-flex flex-column gap-3">
                             <div class="position-relative overflow-hidden rounded-3">
-                                <img src="image/dummy-img-900x600.jpg" alt="image" class="img-fluid">
+                                    <img src="image/silk-photo-sunroom.avif" alt="Bright furnished sunroom in a real SILK Homes property" class="img-fluid silk-journal-card-image" width="1200" height="800" loading="lazy" decoding="async" >
                                 <div class="blog-overlay"></div>
                                 <div class="position-absolute top-0 end-0 px-4 py-4 bg-accent-color-2 rounded-4"
                                     style="margin-top: 1rem; margin-right: 1rem;">
-                                    <span class="text-white">Blog</span>
+                                    <span class="text-white">Homes</span>
                                 </div>
                                 <div class="position-absolute bottom-0 left-0 text-white p-5">
                                     <h4>Living Well in a Furnished SILK Home</h4>
                                     <div class="d-flex flex-column gap-1 mb-3">
-                                        <p class="text-white">Read how furnished homes, gardens, and intentional routines can make space for better work and deeper rest.
+                                        <p class="text-white">A furnished home is more than a bed: it is a sunlit room, a place to work, and a setting for deeper rest.
                                         </p>
                                         <a href="single_blog.html" class="font-1 fs-5 read-more">Read More<i
                                                 class="rtmicon rtmicon-chevron-right fw-bold fs-6"></i></a>
@@ -806,17 +791,16 @@
                     <div class="col mb-3 scrollanimation animated fadeInLeft">
                         <div class="card d-flex flex-column gap-3">
                             <div class="position-relative overflow-hidden rounded-3">
-                                <img src="image/dummy-img-900x600.jpg" alt="image" class="img-fluid">
+                                    <img src="image/silk-photo-garden-plan.avif" alt="Landscape plan for the gardens and grounds of a real SILK property" class="img-fluid silk-journal-card-image" width="1200" height="800" loading="lazy" decoding="async" >
                                 <div class="blog-overlay"></div>
                                 <div class="position-absolute top-0 end-0 px-4 py-4 bg-accent-color-2 rounded-4"
                                     style="margin-top: 1rem; margin-right: 1rem;">
-                                    <span class="text-white">News</span>
+                                    <span class="text-white">Stewardship</span>
                                 </div>
                                 <div class="position-absolute bottom-0 left-0 text-white p-5">
                                     <h4>Gardens, Porches, and the Work of Belonging</h4>
                                     <div class="d-flex flex-column gap-1 mb-3">
-                                        <p class="text-white">Our notes will help you plan a grounded
-                                            and enjoyable visit.
+                                        <p class="text-white">Belonging starts with noticing what a property can hold: paths, gardens, gathering places, and the work of keeping them alive.
                                         </p>
                                         <a href="single_blog.html" class="font-1 fs-5 read-more">Read More<i
                                                 class="rtmicon rtmicon-chevron-right fw-bold fs-6"></i></a>
@@ -828,17 +812,16 @@
                     <div class="col mb-3 scrollanimation animated fadeInRight">
                         <div class="card d-flex flex-column gap-3">
                             <div class="position-relative overflow-hidden rounded-3">
-                                <img src="image/dummy-img-900x600.jpg" alt="image" class="img-fluid">
+                                    <img src="image/silk-photo-cattle.avif" alt="Cattle pasture and changing autumn landscape near a SILK Homes town" class="img-fluid silk-journal-card-image" width="1200" height="800" loading="lazy" decoding="async" >
                                 <div class="blog-overlay"></div>
                                 <div class="position-absolute top-0 end-0 px-4 py-4 bg-accent-color-2 rounded-4"
                                     style="margin-top: 1rem; margin-right: 1rem;">
-                                    <span class="text-white">Tips</span>
+                                    <span class="text-white">Seasons</span>
                                 </div>
                                 <div class="position-absolute bottom-0 left-0 text-white p-5">
                                     <h4>Four Seasons of Intentional Living</h4>
                                     <div class="d-flex flex-column gap-1 mb-3">
-                                        <p class="text-white">Our guide will help you plan your time to take full
-                                            advantage of the seasonal activities and natural beauty that await.
+                                        <p class="text-white">Weather changes the work of a home: light, food, rest, and outdoor time all take a different shape as the year turns.
                                         </p>
                                         <a href="single_blog.html" class="font-1 fs-5 read-more">Read More<i
                                                 class="rtmicon rtmicon-chevron-right fw-bold fs-6"></i></a>
@@ -854,7 +837,7 @@
     </main>
 
     <footer class="silk-site-footer">
-    <div class="section pb-0 bg-text-color bg-attach-cover" style="background-image: url(image/bg_footer.png);">
+    <div class="section pb-0 bg-text-color bg-attach-cover" style="background: linear-gradient(135deg, #18382a, #2f5b42);">
         <div class="r-container">
             <div class="border-bottom border-light pb-xl-5 pb-0">
                 <div class="row row-cols-xl-4 row-cols-1">
@@ -919,16 +902,14 @@
     </div>
 </footer>
 
-    <script src="js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="js/vendor/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/swiper-script.js"></script>
-    <script src="js/silk-homes-template.js"></script>
-    <script src="js/vendor/isotope.pkgd.min.js"></script>
-    <script src="js/video_embedded.js"></script>
-    <script src="js/vendor/fslightbox.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.0/oyethemes_onscroll_animation.js"></script>
+    <script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="js/vendor/swiper-bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/swiper-script.js" defer></script>
+    <script src="js/silk-homes-template.js" defer></script>
+    <script src="js/vendor/isotope.pkgd.min.js" defer></script>
+    <script src="js/video_embedded.js" defer></script>
+    <script src="js/vendor/fslightbox.js" defer></script>
 </body>
 
 </html>

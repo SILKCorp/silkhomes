@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Compact visual sitemap for the SILK Homes website.">
+    <title>SILK Homes — Visual Sitemap</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #18382a;
+            --muted: #67746b;
+            --paper: #f7f2e9;
+            --panel: #fffdf8;
+            --line: #d9d0c1;
+            --gold: #b58a3c;
+            --green-soft: #e4ece2;
+            --shadow: 0 16px 38px rgba(24, 56, 42, 0.1);
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 94% 0%, rgba(181, 138, 60, 0.16), transparent 28rem),
+                linear-gradient(180deg, #f1eadf 0, var(--paper) 22rem, #fbfaf5 100%);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            min-height: 100vh;
+        }
+
+        a { color: inherit; }
+        .shell { width: min(1680px, calc(100% - 48px)); margin: 0 auto; padding: 42px 0 76px; }
+        .masthead { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+        .brandline { display: flex; align-items: center; gap: 12px; color: var(--gold); font-weight: 800; letter-spacing: .22em; font-size: .78rem; }
+        .mark { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--gold); border-radius: 50% 50% 50% 0; transform: rotate(-18deg); font-size: 1rem; }
+        h1, h2, h3, p { margin: 0; }
+        h1 { max-width: 760px; margin-top: 16px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.4rem, 5vw, 5.5rem); font-weight: 400; letter-spacing: -.045em; line-height: .96; }
+        .intro { max-width: 650px; margin-top: 18px; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+        .meta { min-width: 285px; padding: 18px; border: 1px solid var(--line); background: rgba(255,253,248,.72); box-shadow: var(--shadow); }
+        .meta strong { display: block; font-size: 1.6rem; font-weight: 700; }
+        .meta span { display: block; margin-top: 5px; color: var(--muted); font-size: .82rem; line-height: 1.45; }
+        .toolbar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 22px 0 36px; padding: 12px; border: 1px solid rgba(217,208,193,.9); background: rgba(247,242,233,.92); backdrop-filter: blur(14px); }
+        .search { flex: 1 1 320px; min-height: 42px; border: 1px solid var(--line); border-radius: 2px; padding: 0 14px; background: var(--panel); color: var(--ink); font: inherit; }
+        .search:focus { outline: 2px solid rgba(181, 138, 60, .45); outline-offset: 2px; }
+        .toolbar-note { color: var(--muted); font-size: .82rem; }
+        .contact-link { color: var(--gold); font-size: .82rem; font-weight: 700; text-decoration: none; }
+        .contact-link:hover { text-decoration: underline; }
+        .map-section { margin-top: 36px; }
+        .section-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+        .eyebrow { color: var(--gold); font-size: .72rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+        .section-heading h2 { margin-top: 4px; font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 400; }
+        .section-rule { flex: 1; height: 1px; background: var(--line); }
+        .page-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+        .page-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 3px; background: var(--panel); text-decoration: none; box-shadow: 0 4px 14px rgba(24,56,42,.045); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+        .page-card:hover, .page-card:focus-visible { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-4px); }
+        .page-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+        .thumb-frame { position: relative; display: flex; align-items: flex-start; justify-content: center; height: clamp(300px, 34vw, 440px); overflow: hidden; padding: 10px 14px; background: var(--green-soft); }
+        .thumb-frame::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.2); }
+        .thumb-frame img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: top center; transition: transform .35s ease; }
+        .page-card:hover .thumb-frame img { transform: scale(1.015); }
+        .page-number { position: absolute; top: 8px; left: 8px; display: grid; place-items: center; min-width: 27px; height: 24px; padding: 0 6px; border-radius: 2px; background: rgba(24,56,42,.88); color: #fffdf8; font-size: .68rem; font-weight: 800; letter-spacing: .06em; }
+        .card-copy { padding: 11px 12px 13px; }
+        .card-copy h3 { overflow: hidden; font-family: Georgia, "Times New Roman", serif; font-size: 1rem; font-weight: 400; line-height: 1.18; text-overflow: ellipsis; white-space: nowrap; }
+        .card-path { display: block; overflow: hidden; margin-top: 5px; color: var(--muted); font-size: .7rem; line-height: 1.25; text-overflow: ellipsis; white-space: nowrap; }
+        .empty { display: none; padding: 24px; border: 1px dashed var(--line); color: var(--muted); text-align: center; }
+        .footer-note { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; line-height: 1.6; }
+        .footer-note code { color: var(--ink); }
+
+        @media (max-width: 1280px) { .page-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+        @media (max-width: 1020px) { .masthead { align-items: start; flex-direction: column; } .meta { min-width: 0; width: 100%; } .page-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        @media (max-width: 720px) { .shell { width: min(100% - 28px, 560px); padding-top: 26px; } .page-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .toolbar { margin-bottom: 24px; } .section-heading { margin-top: 28px; } .card-copy { padding: 9px 10px 11px; } .card-copy h3 { font-size: .92rem; } }
+        @media (max-width: 390px) { .page-grid { grid-template-columns: 1fr; } }
+        @media print { .toolbar { position: static; } .page-card { break-inside: avoid; box-shadow: none; } .page-card:hover { transform: none; } }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+    </style>
+</head>
+<body>
+    <main class="shell">
+        <header class="masthead">
+            <div>
+                <div class="brandline"><span class="mark" aria-hidden="true">✦</span><span>SILK HOMES</span></div>
+                <h1>Visual sitemap</h1>
+                <p class="intro">A compact, rendered map of every current HTML page. Each thumbnail contains the complete page height, scaled to fit for comparison, and each card opens the corresponding page for review.</p>
+            </div>
+            <div class="meta" aria-label="Sitemap details">
+                <strong>42 pages</strong>
+                <span>5 page groups · full-page AVIF thumbnails</span>
+                <span>Generated Jul 18, 2026, 10:36 PM</span>
+            </div>
+        </header>
+
+        <div class="toolbar" role="search">
+            <label class="visually-hidden" for="page-search">Filter pages</label>
+            <input class="search" id="page-search" type="search" placeholder="Filter by page title or path…" autocomplete="off">
+            <span class="toolbar-note" id="result-count">Showing 42 pages</span>
+            <a class="contact-link" href="sitemap/visual-sitemap.avif" target="_blank" rel="noopener">Open compact AVIF sheet ↗</a>
+        </div>
+
+        <div id="page-map">
+        <section class="map-section" aria-labelledby="group-root">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Root</p>
+                    <h2 id="group-root">17 pages</h2>
+                </div>
+                <span class="section-rule" aria-hidden="true"></span>
+            </div>
+            <div class="page-grid">
+                    <a class="page-card" data-page-card data-search="404 not found 404.html root" href="404.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/404.avif" alt="Full-page rendered thumbnail of 404 Not Found" width="1440" height="1575" loading="eager" decoding="async">
+                            <span class="page-number">01</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>404 Not Found</h3>
+                            <span class="card-path">/404</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="about silk homes about.html root" href="about.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/about.avif" alt="Full-page rendered thumbnail of About SILK Homes" width="1440" height="5662" loading="eager" decoding="async">
+                            <span class="page-number">02</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>About SILK Homes</h3>
+                            <span class="card-path">/About</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="signature experiences activities_detail.html root" href="activities_detail.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/activities-detail.avif" alt="Full-page rendered thumbnail of Signature Experiences" width="1440" height="3574" loading="eager" decoding="async">
+                            <span class="page-number">03</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Signature Experiences</h3>
+                            <span class="card-path">/Activities Detail</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="life at silk homes activities.html root" href="activities.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/activities.avif" alt="Full-page rendered thumbnail of Life at SILK Homes" width="1440" height="4751" loading="eager" decoding="async">
+                            <span class="page-number">04</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Life at SILK Homes</h3>
+                            <span class="card-path">/Activities</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="ask about availability appointment.html root" href="appointment.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/appointment.avif" alt="Full-page rendered thumbnail of Ask About Availability" width="1440" height="2301" loading="eager" decoding="async">
+                            <span class="page-number">05</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Ask About Availability</h3>
+                            <span class="card-path">/Appointment</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="silk homes journal blog.html root" href="blog.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/blog.avif" alt="Full-page rendered thumbnail of SILK Homes Journal" width="1440" height="3097" loading="eager" decoding="async">
+                            <span class="page-number">06</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>SILK Homes Journal</h3>
+                            <span class="card-path">/Blog</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="contact silk homes contact.html root" href="contact.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/contact.avif" alt="Full-page rendered thumbnail of Contact SILK Homes" width="1440" height="2704" loading="eager" decoding="async">
+                            <span class="page-number">07</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Contact SILK Homes</h3>
+                            <span class="card-path">/Contact</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="silk home details cottages_detail.html root" href="cottages_detail.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/cottages-detail.avif" alt="Full-page rendered thumbnail of SILK Home Details" width="1440" height="5994" loading="eager" decoding="async">
+                            <span class="page-number">08</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>SILK Home Details</h3>
+                            <span class="card-path">/Cottages Detail</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="homes cottages.html root" href="cottages.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/cottages.avif" alt="Full-page rendered thumbnail of Homes" width="1440" height="4148" loading="eager" decoding="async">
+                            <span class="page-number">09</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Homes</h3>
+                            <span class="card-path">/Cottages</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="faqs faq.html root" href="faq.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/faq.avif" alt="Full-page rendered thumbnail of FAQs" width="1440" height="2237" loading="eager" decoding="async">
+                            <span class="page-number">10</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>FAQs</h3>
+                            <span class="card-path">/Faq</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="gallery gallery.html root" href="gallery.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/gallery.avif" alt="Full-page rendered thumbnail of Gallery" width="1440" height="10826" loading="eager" decoding="async">
+                            <span class="page-number">11</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Gallery</h3>
+                            <span class="card-path">/Gallery</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="homepage index.html root" href="index.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/index.avif" alt="Full-page rendered thumbnail of Homepage" width="1440" height="9474" loading="eager" decoding="async">
+                            <span class="page-number">12</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Homepage</h3>
+                            <span class="card-path">/</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="stay planning price_plan.html root" href="price_plan.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/price-plan.avif" alt="Full-page rendered thumbnail of Stay Planning" width="1440" height="3855" loading="eager" decoding="async">
+                            <span class="page-number">13</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Stay Planning</h3>
+                            <span class="card-path">/Price Plan</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="signature experiences service_detail.html root" href="service_detail.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/service-detail.avif" alt="Full-page rendered thumbnail of Signature Experiences" width="1440" height="2281" loading="eager" decoding="async">
+                            <span class="page-number">14</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Signature Experiences</h3>
+                            <span class="card-path">/Service Detail</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="journal feature single_blog.html root" href="single_blog.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/single-blog.avif" alt="Full-page rendered thumbnail of Journal Feature" width="1440" height="2762" loading="eager" decoding="async">
+                            <span class="page-number">15</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Journal Feature</h3>
+                            <span class="card-path">/Single Blog</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="the silk homes crew staff.html root" href="staff.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/staff.avif" alt="Full-page rendered thumbnail of The SILK Homes Crew" width="1440" height="3650" loading="eager" decoding="async">
+                            <span class="page-number">16</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>The SILK Homes Crew</h3>
+                            <span class="card-path">/Staff</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="the silk homes crew team.html root" href="team.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/team.avif" alt="Full-page rendered thumbnail of The SILK Homes Crew" width="1440" height="3650" loading="eager" decoding="async">
+                            <span class="page-number">17</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>The SILK Homes Crew</h3>
+                            <span class="card-path">/Team</span>
+                        </div>
+                    </a>
+            </div>
+        </section>
+
+        <section class="map-section" aria-labelledby="group-locations">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Locations</p>
+                    <h2 id="group-locations">3 pages</h2>
+                </div>
+                <span class="section-rule" aria-hidden="true"></span>
+            </div>
+            <div class="page-grid">
+                    <a class="page-card" data-page-card data-search="marietta, oh locations/marietta.html locations" href="locations/marietta.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/locations-marietta.avif" alt="Full-page rendered thumbnail of Marietta, OH" width="1440" height="5798" loading="eager" decoding="async">
+                            <span class="page-number">18</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Marietta, OH</h3>
+                            <span class="card-path">/Locations/Marietta</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="parkersburg, wv locations/parkersburg.html locations" href="locations/parkersburg.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/locations-parkersburg.avif" alt="Full-page rendered thumbnail of Parkersburg, WV" width="1440" height="4552" loading="eager" decoding="async">
+                            <span class="page-number">19</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Parkersburg, WV</h3>
+                            <span class="card-path">/Locations/Parkersburg</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="ravenswood, wv locations/ravenswood.html locations" href="locations/ravenswood.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/locations-ravenswood.avif" alt="Full-page rendered thumbnail of Ravenswood, WV" width="1440" height="6771" loading="eager" decoding="async">
+                            <span class="page-number">20</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Ravenswood, WV</h3>
+                            <span class="card-path">/Locations/Ravenswood</span>
+                        </div>
+                    </a>
+            </div>
+        </section>
+
+        <section class="map-section" aria-labelledby="group-pages">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Pages</p>
+                    <h2 id="group-pages">13 pages</h2>
+                </div>
+                <span class="section-rule" aria-hidden="true"></span>
+            </div>
+            <div class="page-grid">
+                    <a class="page-card" data-page-card data-search="our community &amp; affiliations pages/community.html pages" href="pages/community.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-community.avif" alt="Full-page rendered thumbnail of Our Community &amp; Affiliations" width="1440" height="4721" loading="eager" decoding="async">
+                            <span class="page-number">21</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Our Community &amp; Affiliations</h3>
+                            <span class="card-path">/Pages/Community</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="contact us pages/contact.html pages" href="pages/contact.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-contact.avif" alt="Full-page rendered thumbnail of Contact Us" width="1440" height="3780" loading="eager" decoding="async">
+                            <span class="page-number">22</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Contact Us</h3>
+                            <span class="card-path">/Pages/Contact</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="join our crew pages/crew.html pages" href="pages/crew.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew.avif" alt="Full-page rendered thumbnail of Join Our Crew" width="1440" height="5346" loading="eager" decoding="async">
+                            <span class="page-number">23</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Join Our Crew</h3>
+                            <span class="card-path">/Pages/Crew</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="a day in the life pages/day-in-the-life.html pages" href="pages/day-in-the-life.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-day-in-the-life.avif" alt="Full-page rendered thumbnail of A Day in the Life" width="1440" height="5752" loading="eager" decoding="async">
+                            <span class="page-number">24</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>A Day in the Life</h3>
+                            <span class="card-path">/Pages/Day In The Life</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="our homes pages/homes.html pages" href="pages/homes.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-homes.avif" alt="Full-page rendered thumbnail of Our Homes" width="1440" height="3668" loading="eager" decoding="async">
+                            <span class="page-number">25</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Our Homes</h3>
+                            <span class="card-path">/Pages/Homes</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="how to join pages/join.html pages" href="pages/join.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-join.avif" alt="Full-page rendered thumbnail of How to Join" width="1440" height="6958" loading="eager" decoding="async">
+                            <span class="page-number">26</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>How to Join</h3>
+                            <span class="card-path">/Pages/Join</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="our journal pages/journal.html pages" href="pages/journal.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-journal.avif" alt="Full-page rendered thumbnail of Our Journal" width="1440" height="7371" loading="eager" decoding="async">
+                            <span class="page-number">27</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Our Journal</h3>
+                            <span class="card-path">/Pages/Journal</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="living simply pages/living-simply.html pages" href="pages/living-simply.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-living-simply.avif" alt="Full-page rendered thumbnail of Living Simply" width="1440" height="7195" loading="eager" decoding="async">
+                            <span class="page-number">28</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Living Simply</h3>
+                            <span class="card-path">/Pages/Living Simply</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="our principles pages/principles.html pages" href="pages/principles.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-principles.avif" alt="Full-page rendered thumbnail of Our Principles" width="1440" height="5388" loading="eager" decoding="async">
+                            <span class="page-number">29</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Our Principles</h3>
+                            <span class="card-path">/Pages/Principles</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="privacy policy pages/privacy-policy.html pages" href="pages/privacy-policy.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-privacy-policy.avif" alt="Full-page rendered thumbnail of Privacy Policy" width="1440" height="6123" loading="eager" decoding="async">
+                            <span class="page-number">30</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Privacy Policy</h3>
+                            <span class="card-path">/Pages/Privacy Policy</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="the mid-ohio valley pages/region.html pages" href="pages/region.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-region.avif" alt="Full-page rendered thumbnail of The Mid-Ohio Valley" width="1440" height="6318" loading="eager" decoding="async">
+                            <span class="page-number">31</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>The Mid-Ohio Valley</h3>
+                            <span class="card-path">/Pages/Region</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="our story pages/story.html pages" href="pages/story.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-story.avif" alt="Full-page rendered thumbnail of Our Story" width="1440" height="7831" loading="eager" decoding="async">
+                            <span class="page-number">32</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Our Story</h3>
+                            <span class="card-path">/Pages/Story</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="terms of service pages/terms-of-service.html pages" href="pages/terms-of-service.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-terms-of-service.avif" alt="Full-page rendered thumbnail of Terms of Service" width="1440" height="4871" loading="eager" decoding="async">
+                            <span class="page-number">33</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Terms of Service</h3>
+                            <span class="card-path">/Pages/Terms Of Service</span>
+                        </div>
+                    </a>
+            </div>
+        </section>
+
+        <section class="map-section" aria-labelledby="group-crew">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Crew</p>
+                    <h2 id="group-crew">6 pages</h2>
+                </div>
+                <span class="section-rule" aria-hidden="true"></span>
+            </div>
+            <div class="page-grid">
+                    <a class="page-card" data-page-card data-search="cooking &amp; cafe opportunities pages/crew/cooking.html crew" href="pages/crew/cooking.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-cooking.avif" alt="Full-page rendered thumbnail of Cooking &amp; Cafe Opportunities" width="1440" height="5080" loading="eager" decoding="async">
+                            <span class="page-number">34</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Cooking &amp; Cafe Opportunities</h3>
+                            <span class="card-path">/Pages/Crew/Cooking</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="gardening volunteer opportunities pages/crew/gardening.html crew" href="pages/crew/gardening.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-gardening.avif" alt="Full-page rendered thumbnail of Gardening Volunteer Opportunities" width="1440" height="4619" loading="eager" decoding="async">
+                            <span class="page-number">35</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Gardening Volunteer Opportunities</h3>
+                            <span class="card-path">/Pages/Crew/Gardening</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="handyman opportunities pages/crew/handyman.html crew" href="pages/crew/handyman.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-handyman.avif" alt="Full-page rendered thumbnail of Handyman Opportunities" width="1440" height="5603" loading="eager" decoding="async">
+                            <span class="page-number">36</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Handyman Opportunities</h3>
+                            <span class="card-path">/Pages/Crew/Handyman</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="housekeeping opportunities pages/crew/housekeeping.html crew" href="pages/crew/housekeeping.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-housekeeping.avif" alt="Full-page rendered thumbnail of Housekeeping Opportunities" width="1440" height="4991" loading="eager" decoding="async">
+                            <span class="page-number">37</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Housekeeping Opportunities</h3>
+                            <span class="card-path">/Pages/Crew/Housekeeping</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="landscaping opportunities pages/crew/landscaping.html crew" href="pages/crew/landscaping.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-landscaping.avif" alt="Full-page rendered thumbnail of Landscaping Opportunities" width="1440" height="4749" loading="eager" decoding="async">
+                            <span class="page-number">38</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Landscaping Opportunities</h3>
+                            <span class="card-path">/Pages/Crew/Landscaping</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="live-in opportunities pages/crew/live-in.html crew" href="pages/crew/live-in.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-live-in.avif" alt="Full-page rendered thumbnail of Live-In Opportunities" width="1440" height="6002" loading="eager" decoding="async">
+                            <span class="page-number">39</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Live-In Opportunities</h3>
+                            <span class="card-path">/Pages/Crew/Live In</span>
+                        </div>
+                    </a>
+            </div>
+        </section>
+
+        <section class="map-section" aria-labelledby="group-crew-locations">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Crew · Locations</p>
+                    <h2 id="group-crew-locations">3 pages</h2>
+                </div>
+                <span class="section-rule" aria-hidden="true"></span>
+            </div>
+            <div class="page-grid">
+                    <a class="page-card" data-page-card data-search="landscaping - marietta, oh pages/crew/landscaping/marietta.html crew · locations" href="pages/crew/landscaping/marietta.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-landscaping-marietta.avif" alt="Full-page rendered thumbnail of Landscaping - Marietta, OH" width="1440" height="4276" loading="eager" decoding="async">
+                            <span class="page-number">40</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Landscaping - Marietta, OH</h3>
+                            <span class="card-path">/Pages/Crew/Landscaping/Marietta</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="landscaping - parkersburg, wv pages/crew/landscaping/parkersburg.html crew · locations" href="pages/crew/landscaping/parkersburg.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-landscaping-parkersburg.avif" alt="Full-page rendered thumbnail of Landscaping - Parkersburg, WV" width="1440" height="4357" loading="eager" decoding="async">
+                            <span class="page-number">41</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Landscaping - Parkersburg, WV</h3>
+                            <span class="card-path">/Pages/Crew/Landscaping/Parkersburg</span>
+                        </div>
+                    </a>
+                    <a class="page-card" data-page-card data-search="landscaping - ravenswood, wv pages/crew/landscaping/ravenswood.html crew · locations" href="pages/crew/landscaping/ravenswood.html">
+                        <div class="thumb-frame">
+                            <img src="sitemap/thumbs/pages-crew-landscaping-ravenswood.avif" alt="Full-page rendered thumbnail of Landscaping - Ravenswood, WV" width="1440" height="4357" loading="eager" decoding="async">
+                            <span class="page-number">42</span>
+                        </div>
+                        <div class="card-copy">
+                            <h3>Landscaping - Ravenswood, WV</h3>
+                            <span class="card-path">/Pages/Crew/Landscaping/Ravenswood</span>
+                        </div>
+                    </a>
+            </div>
+        </section>
+            <p class="empty" id="empty-state">No pages match that filter.</p>
+        </div>
+
+        <p class="footer-note">Generated from the repository’s public <code>.html</code> files by <code>scripts/build-visual-sitemap.mjs</code>. The sitemap page itself is excluded to avoid a recursive thumbnail.</p>
+    </main>
+    <script>
+        (() => {
+            const input = document.querySelector('#page-search');
+            const cards = [...document.querySelectorAll('[data-page-card]')];
+            const sections = [...document.querySelectorAll('.map-section')];
+            const count = document.querySelector('#result-count');
+            const empty = document.querySelector('#empty-state');
+            const update = () => {
+                const term = input.value.trim().toLowerCase();
+                let visible = 0;
+                cards.forEach((card) => {
+                    const matches = !term || card.dataset.search.includes(term);
+                    card.hidden = !matches;
+                    if (matches) visible += 1;
+                });
+                sections.forEach((section) => {
+                    section.hidden = !section.querySelector('[data-page-card]:not([hidden])');
+                });
+                empty.style.display = visible ? 'none' : 'block';
+                count.textContent = `Showing ${visible} ${visible === 1 ? 'page' : 'pages'}`;
+            };
+            input.addEventListener('input', update);
+        })();
+    </script>
+</body>
+</html>
