@@ -1,7 +1,9 @@
 @font-face {
   font-family: 'rtmicon';
   src:  url('../../font/rtmicon/rtmicon.eot?spwgs3');
-  src:  url('../../font/rtmicon/rtmicon.eot?spwgs3#iefix') format('embedded-opentype'),
+  /* woff2 subset of the glyphs the site uses; regenerate with scripts/subset-icon-fonts.py */
+  src:  url('../../font/rtmicon/rtmicon-subset.woff2') format('woff2'),
+    url('../../font/rtmicon/rtmicon.eot?spwgs3#iefix') format('embedded-opentype'),
     url('../../font/rtmicon/rtmicon.ttf?spwgs3') format('truetype'),
     url('../../font/rtmicon/rtmicon.woff?spwgs3') format('woff'),
     url('../../font/rtmicon/rtmicon.svg?spwgs3#rtmicon') format('svg');
